@@ -1,0 +1,7 @@
+storage
+packages
+projects.cson
+compile-cache
+dev
+.npm
+.node-gyp

@@ -1,0 +1,47 @@
+'global':
+  'exception-reporting':
+    'userId': '2df3cfa5-7d54-02b9-7a0b-4beda1d4327f'
+  'welcome':
+    'showOnStartup': false
+  'metrics':
+    'userId': '02bc5e43e880e4c1462caa9b0c9ecc6db95dc72f'
+  'editor':
+    'fontFamily': 'Ubuntu Mono'
+    'showIndentGuide': true
+    'fontSize': 18
+  'atom-beautify':
+    '_analyticsUserId': 'e7aa2877-7a6d-4a4a-b7fc-fe6d34677999'
+  'remember-session':
+    'x': 0
+    'y': 23
+    'tabs': '/Users/felipe/dotfiles/atom/.atom/.gitignore&&/Users/felipe/dotfiles/zsh/.zshrc&&/Users/felipe/dotfiles/.gitignore&&/Users/felipe/dotfiles/emacs/.emacs.d/tmp/.gitignore&&/Users/felipe/dotfiles/atom/.atom/projects.cson&&/Users/felipe/dotfiles/zsh/.gitignore'
+    'selectedTab': ''
+    'path': '/Users/felipe/dotfiles'
+    'width': 1276
+    'height': 773
+    'treeWidth': 199
+  'autocomplete':
+    'includeCompletionsFromAllBuffers': true
+  'fuzzy-finder':
+    'ignoredNames': [
+      '*.class'
+      '*.asc'
+    ]
+  'core':
+    'themes': [
+      'atom-light-ui'
+      'atom-dark-syntax'
+    ]
+    'ignoredNames': [
+      '.git'
+      '.svn'
+      '.DS_Store'
+    ]
+    'disabledPackages': [
+      'metrics'
+    ]
+    'projectHome': '/Users/felipe/devel'
+  'tree-view':
+    'hideIgnoredNames': true
+    'hideVcsIgnoredFiles': true
+  'autoclose-html': {}

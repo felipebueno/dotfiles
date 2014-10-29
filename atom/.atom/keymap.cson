@@ -1,0 +1,56 @@
+'body':
+  'alt-x': 'command-palette:toggle'
+  'cmd-x k': 'core:close'
+  'cmd-x cmd-f': 'fuzzy-finder:toggle-file-finder'
+  'cmd-x b': 'fuzzy-finder:toggle-buffer-finder'
+  'cmd-x 3': 'pane:split-right'
+  'cmd-x 2': 'pane:split-down'
+  'cmd-x 0': 'pane:close'
+  'cmd-x 1': 'pane:close-other-items'
+  'cmd-x o': 'window:focus-next-pane'
+  'cmd-x cmd-c': 'window:close'
+  'cmd-g': 'core:cancel'
+
+'atom-text-editor':
+  'cmd-x h': 'core:select-all'
+  'cmd-k': 'editor:cut-to-end-of-line'
+  'cmd-x cmd-s': 'core:save'
+  'cmd-a': 'editor:move-to-first-character-of-line'
+  'cmd-e': 'editor:move-to-end-of-line'
+  'cmd-g': 'core:cancel'
+  'cmd-y': 'core:paste'
+  'alt-w': 'core:copy'
+  'cmd-w': 'core:cut'
+  'cmd-_': 'core:undo'
+  'cmd-j': 'editor:newline'
+  'alt-;': 'editor:toggle-line-comments'
+  'alt-<': 'core:move-to-top'
+  'alt->': 'core:move-to-bottom'
+  'alt-/': 'autocomplete:toggle'
+  'alt-.': 'symbols-view:toggle-file-symbols'
+  'alt-v': 'core:page-up'
+  'cmd-v': 'core:page-down'
+
+'.find-and-replace':
+  'cmd-s': 'find-and-replace:find-next'
+  'cmd-r': 'find-and-replace:find-previous'
+  'cmd-g': 'find-and-replace:close'
+
+'.tree-view-dialog .mini.editor':
+  'cmd-alt-n': 'core:move-down'
+
+'.tool-panel.panel-left, .tool-panel.panel-right':
+  'cmd-g': 'tool-panel:unfocus'
+
+'.platform-darwin':
+  'alt-g g': 'go-to-line:toggle'
+  'cmd-g': 'core:cancel'
+  'cmd-s': 'find-and-replace:show'
+  'f12': 'tree-view:toggle'
+  'cmd-p': 'core:move-up'
+  'cmd-n': 'core:move-down'
+  'cmd-b': 'core:move-left'
+  'cmd-f': 'core:move-right'
+
+'.platform-darwin .go-to-line .mini.editor input':
+  'cmd-g': 'core:cancel'
