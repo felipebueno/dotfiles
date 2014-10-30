@@ -15,8 +15,6 @@
   'cmd-x h': 'core:select-all'
   'cmd-k': 'editor:cut-to-end-of-line'
   'cmd-x cmd-s': 'core:save'
-  'cmd-a': 'editor:move-to-first-character-of-line'
-  'cmd-e': 'editor:move-to-end-of-line'
   'cmd-g': 'core:cancel'
   'cmd-y': 'core:paste'
   'alt-w': 'core:copy'
@@ -45,12 +43,16 @@
 '.platform-darwin':
   'alt-g g': 'go-to-line:toggle'
   'cmd-g': 'core:cancel'
-  'cmd-s': 'find-and-replace:show'
   'f12': 'tree-view:toggle'
   'cmd-p': 'core:move-up'
   'cmd-n': 'core:move-down'
   'cmd-b': 'core:move-left'
   'cmd-f': 'core:move-right'
+
+'.platform-darwin .editor':
+  'cmd-a': 'editor:move-to-first-character-of-line'
+  'cmd-e': 'editor:move-to-end-of-line'
+  'cmd-s': 'find-and-replace:show'
 
 '.platform-darwin .go-to-line .mini.editor input':
   'cmd-g': 'core:cancel'
