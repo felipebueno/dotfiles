@@ -62,6 +62,7 @@
   'cmd-f': 'core:move-right'
 
 '.platform-darwin .editor':
+  'cmd-g': 'core:cancel'
   'cmd-a': 'editor:move-to-first-character-of-line'
   'cmd-e': 'editor:move-to-end-of-line'
   'cmd-s': 'find-and-replace:show'
