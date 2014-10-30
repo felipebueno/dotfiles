@@ -1,4 +1,5 @@
 'body':
+  'f11': 'window:toggle-full-screen'
   'alt-x': 'command-palette:toggle'
   'cmd-x': 'nil'
   'cmd-x k': 'core:close'
