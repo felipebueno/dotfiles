@@ -14,6 +14,8 @@
   'cmd-x o': 'window:focus-next-pane'
   'cmd-x cmd-c': 'window:close'
   'cmd-g': 'core:cancel'
+  'cmd-x right': 'pane:show-next-item'
+  'cmd-x left': 'pane:show-previous-item'
 
 'atom-text-editor':
   'cmd-x h': 'core:select-all'
