@@ -3,6 +3,7 @@
   'alt-x': 'command-palette:toggle'
   'cmd-c': 'nil'
   'cmd-x': 'nil'
+  'cmd-h': 'core:backspace'
   'cmd-x k': 'core:close'
   'cmd-x cmd-f': 'fuzzy-finder:toggle-file-finder'
   'cmd-x b': 'fuzzy-finder:toggle-buffer-finder'
@@ -16,6 +17,7 @@
 
 'atom-text-editor':
   'cmd-x h': 'core:select-all'
+  'cmd-alt-h': 'editor:delete-to-beginning-of-word'
   'cmd-k': 'editor:cut-to-end-of-line'
   'cmd-x cmd-s': 'core:save'
   'cmd-g': 'core:cancel'
