@@ -1,5 +1,6 @@
 'body':
   'alt-x': 'command-palette:toggle'
+  'cmd-x': 'nil'
   'cmd-x k': 'core:close'
   'cmd-x cmd-f': 'fuzzy-finder:toggle-file-finder'
   'cmd-x b': 'fuzzy-finder:toggle-buffer-finder'
