@@ -18,6 +18,8 @@
   'cmd-x left': 'pane:show-previous-item'
 
 'atom-text-editor':
+  'shift-cmd-N': 'editor:move-line-down'
+  'shift-cmd-P': 'editor:move-line-up'
   'cmd-x h': 'core:select-all'
   'cmd-alt-h': 'editor:delete-to-beginning-of-word'
   'cmd-k': 'editor:cut-to-end-of-line'
