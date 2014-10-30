@@ -30,6 +30,9 @@
   'alt-v': 'core:page-up'
   'cmd-v': 'core:page-down'
 
+'atom-text-editor:not(.mini)':
+  'cmd-shift-k': 'editor:delete-line'
+
 '.find-and-replace':
   'cmd-s': 'find-and-replace:find-next'
   'cmd-r': 'find-and-replace:find-previous'

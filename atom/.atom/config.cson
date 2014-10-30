@@ -19,7 +19,6 @@
     'path': '/Users/felipe/devel/playground/dotfiles'
     'width': 1276
     'height': 773
-    'treeWidth': 199
   'autocomplete':
     'includeCompletionsFromAllBuffers': true
   'fuzzy-finder':
