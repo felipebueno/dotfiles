@@ -18,6 +18,7 @@
   'cmd-x left': 'pane:show-previous-item'
 
 'atom-text-editor':
+  'shift-alt-D': 'editor:duplicate-lines'
   'shift-cmd-N': 'editor:move-line-down'
   'shift-cmd-P': 'editor:move-line-up'
   'cmd-x h': 'core:select-all'
