@@ -12,7 +12,7 @@
   'cmd-x 0': 'pane:close'
   'cmd-x 1': 'pane:close-other-items'
   'cmd-x o': 'window:focus-next-pane'
-  'cmd-x cmd-c': 'window:close'
+  'cmd-x cmd-c': 'application:quit'
   'cmd-g': 'core:cancel'
   'cmd-x right': 'pane:show-next-item'
   'cmd-x left': 'pane:show-previous-item'

@@ -14,9 +14,9 @@
   'remember-session':
     'x': 0
     'y': 23
-    'tabs': '/Users/felipe/dotfiles/atom/.atom/keymap.cson&&/Users/felipe/devel/playground/dotfiles/stylesheets/pygment_trac.css&&/Users/felipe/devel/playground/dotfiles/index.html'
+    'tabs': ''
     'selectedTab': ''
-    'path': '/Users/felipe/devel/playground/dotfiles'
+    'path': ''
     'width': 1276
     'height': 773
   'autocomplete':
