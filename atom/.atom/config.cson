@@ -42,5 +42,4 @@
     'projectHome': '/Users/felipe/devel'
   'tree-view':
     'hideIgnoredNames': true
-    'hideVcsIgnoredFiles': true
   'autoclose-html': {}
