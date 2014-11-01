@@ -19,8 +19,8 @@
 
 'atom-text-editor':
   'shift-alt-D': 'editor:duplicate-lines'
-  'shift-cmd-N': 'editor:move-line-down'
-  'shift-cmd-P': 'editor:move-line-up'
+  'shift-cmd-alt-N': 'editor:move-line-down'
+  'shift-cmd-alt-P': 'editor:move-line-up'
   'cmd-x h': 'core:select-all'
   'cmd-alt-h': 'editor:delete-to-beginning-of-word'
   'cmd-k': 'editor:cut-to-end-of-line'
