@@ -46,6 +46,7 @@
 'atom-text-editor:not(.mini)':
   'cmd-shift-k': 'editor:delete-line'
   'cmd-i': 'editor:indent'
+  'cmd-g': 'core:cancel'
 
 '.find-and-replace':
   'cmd-s': 'find-and-replace:find-next'
