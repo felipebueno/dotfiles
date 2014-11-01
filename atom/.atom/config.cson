@@ -17,8 +17,9 @@
     'tabs': ''
     'selectedTab': ''
     'path': ''
-    'width': 1276
+    'width': 1280
     'height': 773
+    'treeWidth': 199
   'autocomplete':
     'includeCompletionsFromAllBuffers': true
   'fuzzy-finder':
