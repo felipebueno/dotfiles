@@ -67,6 +67,7 @@
   'cmd-n': 'core:move-down'
   'cmd-b': 'core:move-left'
   'cmd-f': 'core:move-right'
+  'cmd-m': 'tree-view:toggle'
 
 '.platform-darwin .editor':
   'cmd-g': 'core:cancel'
