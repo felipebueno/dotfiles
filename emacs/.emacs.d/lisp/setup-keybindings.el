@@ -47,7 +47,6 @@
 
 ;; Transpose stuff with M-t
 (global-unset-key (kbd "M-t")) ;; which used to be transpose-words
-(global-set-key (kbd "M-t l") 'transpose-lines)
 (global-set-key (kbd "M-t w") 'transpose-words)
 (global-set-key (kbd "M-t s") 'transpose-sexps)
 (global-set-key (kbd "M-t p") 'transpose-params)
@@ -56,6 +55,7 @@
 ;; Use M-w for copy-line if no active region
 (global-set-key (kbd "M-w") 'save-region-or-current-line)
 (global-set-key (kbd "C-w") 'kill-region-or-current-line)
+(global-set-key (kbd "M-S-d") 'duplicate-line)
 
 
 (global-set-key [f12] 'neotree-toggle)

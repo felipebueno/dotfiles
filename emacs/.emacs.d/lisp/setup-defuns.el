@@ -63,8 +63,12 @@
   (beginning-of-line-text))
 
 (defun duplicate-line ()
-  (interactive "P")
-  (save-region-or-current-line)
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
   (yank))
 
 (provide 'setup-defuns)
