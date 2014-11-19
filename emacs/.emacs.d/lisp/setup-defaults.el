@@ -50,4 +50,7 @@
 
 (setq eval-expression-print-level nil)
 
+(set-face-attribute 'linum nil :background "#00BBAA")
+(set-face-attribute 'linum nil :foreground "#000")
+
 (provide 'setup-defaults)
