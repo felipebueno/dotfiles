@@ -26,6 +26,11 @@
     'ignoredNames': [
       '*.class'
       '*.asc'
+      '*.pyc'
+      '*.o'
+      '*.elf'
+      '*.elf'
+      '*.drv'
     ]
   'core':
     'themes': [
@@ -36,6 +41,11 @@
       '.git'
       '.svn'
       '.DS_Store'
+      '*.pyc'
+      '*.pyo'
+      '*.o'
+      '*.elf'
+      '*.drv'
     ]
     'disabledPackages': [
       'metrics'
