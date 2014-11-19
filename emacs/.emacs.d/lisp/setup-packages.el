@@ -6,7 +6,8 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
-(defvar my-packages '(align-cljlet
+(defvar my-packages '(android-mode
+                      align-cljlet
                       auto-compile
                       auto-dictionary
                       better-defaults
