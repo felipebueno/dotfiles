@@ -24,8 +24,8 @@ export ANDROID_HOME=$HOME/devel/tools/adt-bundle-mac-x86_64-20140702/sdk
 
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/devel/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:/usr/local/bin"
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export EDITOR='atom'
 
 alias git=hub
+set -k
