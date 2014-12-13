@@ -54,6 +54,22 @@
 
 
 (global-set-key [f12] 'neotree-toggle)
+(global-set-key (kbd "ESC <right>") 'paredit-forward-slurp-sexp)
+(global-set-key (kbd "ESC <left>") 'paredit-backward-barf-sexp)
+
+(global-unset-key (kbd "<left>"))
+(global-unset-key (kbd "<right>"))
+(global-unset-key (kbd "<up>"))
+(global-unset-key (kbd "<down>"))
+(global-set-key (kbd "<left>") 'previous-buffer)
+(global-set-key (kbd "<right>") 'next-buffer)
+
+;; Shortcuts for move-text (installed thru melpa)
+(global-set-key (kbd "C-x p") 'move-text-up)
+(global-set-key (kbd "C-x n") 'move-text-down)
+
+;;(global-unset-key (kbd "C-x C-o"))
+(global-set-key (kbd "C-x C-o") 'ffip)
 
 
 (provide 'setup-keybindings)
