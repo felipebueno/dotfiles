@@ -17,7 +17,7 @@
  '(ido-show-dot-for-dired t)
  '(inhibit-startup-screen t)
  '(scroll-conservatively 101)
- '(sr-speedbar-right-side nil))
+ '(sr-speedbar-right-side nil)
  '(truncate-lines t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
