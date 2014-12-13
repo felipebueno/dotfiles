@@ -14,9 +14,9 @@
   'remember-session':
     'x': 0
     'y': 23
-    'tabs': ''
+    'tabs': '/Users/felipe/Library/Arduino/preferences.txt'
     'selectedTab': ''
-    'path': ''
+    'path': '/Users/felipe/Library/Arduino'
     'width': 1280
     'height': 773
     'treeWidth': 199
@@ -37,6 +37,11 @@
       'atom-light-ui'
       'atom-dark-syntax'
     ]
+    'disabledPackages': [
+      'metrics'
+      'symbols-view'
+    ]
+    'projectHome': '/Users/felipe/devel'
     'ignoredNames': [
       '.git'
       '.svn'
@@ -47,11 +52,9 @@
       '*.elf'
       '*.drv'
     ]
-    'disabledPackages': [
-      'metrics'
-    ]
-    'projectHome': '/Users/felipe/devel'
   'tree-view':
     'hideIgnoredNames': true
     'hideVcsIgnoredFiles': true
+  'markdown-preview':
+    'breakOnSingleNewline': true
   'autoclose-html': {}
