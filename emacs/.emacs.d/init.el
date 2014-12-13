@@ -20,9 +20,11 @@
 (require 'setup-defuns)
 (require 'setup-keybindings)
 (require 'setup-hooks)
+(require 'setup-scratch-buffer)
 
 (require 'setup-eshell)
 (require 'setup-org)
+
 ;;(require 'setup-java)
 ;;(require 'setup-android)
 
