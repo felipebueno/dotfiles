@@ -50,8 +50,11 @@
 
 (setq eval-expression-print-level nil)
 
-(set-face-attribute 'linum nil :background "#00BBAA")
-(set-face-attribute 'linum nil :foreground "#000")
+(set-face-attribute 'linum nil :background "#00CC00")
+(set-face-attribute 'linum nil :foreground "#880000")
+(set-face-attribute 'linum nil :weight 'ultra-bold)
+
+
 (when (fboundp 'winner-mode)
   (winner-mode 1))
 
