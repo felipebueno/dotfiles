@@ -52,5 +52,7 @@
 
 (set-face-attribute 'linum nil :background "#00BBAA")
 (set-face-attribute 'linum nil :foreground "#000")
+(when (fboundp 'winner-mode)
+  (winner-mode 1))
 
 (provide 'setup-defaults)
