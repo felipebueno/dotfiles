@@ -23,16 +23,11 @@
                   (find-file (expand-file-name user-init-file user-emacs-directory))))
 
 
-;; Shortcuts for move-text (installed thru melpa)
-(global-set-key (kbd "C-S-p") 'move-text-up)
-(global-set-key (kbd "C-S-n") 'move-text-down)
-
-
 ;; https://github.com/magnars/multiple-cursors.el
 ;; From active region to multiple cursors:
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(global-set-key (kbd "<f6>") 'mc/mark-next-like-this)
+(global-set-key (kbd "<f7>") 'mc/mark-previous-like-this)
+(global-set-key (kbd "<f8>") 'mc/mark-all-like-this)
 
 
 ;; Toggle fullscreen
