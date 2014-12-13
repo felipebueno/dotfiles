@@ -36,3 +36,8 @@
 (require 'server)
 (unless (server-running-p)
   (server-start))
+
+(require 'clojure-mode)
+(put-clojure-indent 'match 1)
+(put-clojure-indent 'fact 1)
+(put-clojure-indent 'go-while-let 1)
