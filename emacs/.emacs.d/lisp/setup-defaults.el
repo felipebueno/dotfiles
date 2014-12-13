@@ -54,7 +54,6 @@
 (set-face-attribute 'linum nil :foreground "#880000")
 (set-face-attribute 'linum nil :weight 'ultra-bold)
 
-
 (when (fboundp 'winner-mode)
   (winner-mode 1))
 
