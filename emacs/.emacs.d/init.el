@@ -15,11 +15,11 @@
 (add-to-list 'load-path site-lisp-dir)
 (add-to-list 'load-path lisp-dir)
 
-(require 'setup-packages)
 (require 'setup-defaults)
+(require 'setup-packages)
 (require 'setup-defuns)
-(require 'setup-hooks)
 (require 'setup-keybindings)
+(require 'setup-hooks)
 
 (require 'setup-eshell)
 (require 'setup-org)
