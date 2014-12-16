@@ -71,5 +71,4 @@
 ;;(global-unset-key (kbd "C-x C-o"))
 (global-set-key (kbd "C-x C-o") 'ffip)
 
-
 (provide 'setup-keybindings)

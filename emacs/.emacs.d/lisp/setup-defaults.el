@@ -57,4 +57,8 @@
 (when (fboundp 'winner-mode)
   (winner-mode 1))
 
+;; Clojure
+(setq nrepl-log-messages t)
+;; end Clojure
+
 (provide 'setup-defaults)

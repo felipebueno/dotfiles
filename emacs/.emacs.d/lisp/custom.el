@@ -14,7 +14,7 @@
  '(display-time-24hr-format t)
  '(display-time-mode t)
  '(global-linum-mode t)
- '(ido-show-dot-for-dired t)
+ ;;'(ido-show-dot-for-dired t)
  '(inhibit-startup-screen t)
  '(scroll-conservatively 101)
  '(sr-speedbar-right-side nil)

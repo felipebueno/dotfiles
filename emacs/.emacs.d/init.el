@@ -37,7 +37,12 @@
 (unless (server-running-p)
   (server-start))
 
+;; Clojure stuff
 (require 'clojure-mode)
 (put-clojure-indent 'match 1)
 (put-clojure-indent 'fact 1)
 (put-clojure-indent 'go-while-let 1)
+(put-clojure-indent 'facts 1)
+(setq cider-stacktrace-fill-column 80)
+(setq cider-repl-result-prefix ";; => ")
+(setq cider-repl-history-file "~/.cider-nrepl_history")
