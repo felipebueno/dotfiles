@@ -39,10 +39,14 @@
 
 ;; Clojure stuff
 (require 'clojure-mode)
+(require 'eval-sexp-fu)
 (put-clojure-indent 'match 1)
 (put-clojure-indent 'fact 1)
 (put-clojure-indent 'go-while-let 1)
 (put-clojure-indent 'facts 1)
+(put-clojure-indent 'tabular 1)
+(put-clojure-indent 'while-let 1)
+(put-clojure-indent 'go-trace 0)
 (setq cider-stacktrace-fill-column 80)
 (setq cider-repl-result-prefix ";; => ")
 (setq cider-repl-history-file "~/.cider-nrepl_history")

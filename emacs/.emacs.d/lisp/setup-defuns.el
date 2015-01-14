@@ -58,9 +58,16 @@
       (kill-region (region-beginning) (region-end))
     (kill-whole-lines 1)))
 
-(defun smart-beggining-of-line ()
+(defun smart-beginning-of-line ()
+  "Move point to first non-whitespace character or beginning-of-line.
+
+Move point to the first non-whitespace character on this line.
+If point was already at that position, move point to beginning of line."
   (interactive)
-  (beginning-of-line-text))
+  (let ((oldpos (point)))
+    (back-to-indentation)
+    (and (= oldpos (point))
+         (beginning-of-line))))
 
 (defun duplicate-line ()
   (interactive)

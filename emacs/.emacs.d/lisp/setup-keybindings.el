@@ -6,6 +6,8 @@
 (define-key view-mode-map "j" 'next-line)
 (define-key view-mode-map "k" 'previous-line)
 
+(global-set-key (kbd "C-a") 'smart-beginning-of-line)
+
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-x C-m") 'smex)
 
@@ -55,14 +57,16 @@
 
 (global-set-key [f12] 'neotree-toggle)
 (global-set-key (kbd "ESC <right>") 'paredit-forward-slurp-sexp)
-(global-set-key (kbd "ESC <left>") 'paredit-backward-barf-sexp)
+(global-set-key (kbd "ESC <left>") 'paredit-forward-barf-sexp)
 
 (global-unset-key (kbd "<left>"))
 (global-unset-key (kbd "<right>"))
 (global-unset-key (kbd "<up>"))
 (global-unset-key (kbd "<down>"))
-(global-set-key (kbd "<left>") 'previous-buffer)
-(global-set-key (kbd "<right>") 'next-buffer)
+(global-set-key (kbd "<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "<up>") 'shrink-window)
+(global-set-key (kbd "<down>") 'enlarge-window)
 
 ;; Shortcuts for move-text (installed thru melpa)
 (global-set-key (kbd "C-x p") 'move-text-up)

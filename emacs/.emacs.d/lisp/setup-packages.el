@@ -3,8 +3,11 @@
 (when (not package-archive-contents)
     (package-refresh-contents))
 
+;; (add-to-list 'package-archives
+;;              '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa-stable" . "http://melpa.milkbox.net/packages/") t)
 
 (defvar my-packages '(android-mode
                       align-cljlet
@@ -46,7 +49,6 @@
                       js2-mode
                       jtags
                       list-utils
-                      malabar-mode
                       neotree
                       fringe-helper
                       move-text
@@ -65,8 +67,6 @@
                       starter-kit-js
                       starter-kit-lisp
                       elisp-slime-nav
-                      starter-kit-perl
-                      starter-kit-ruby
                       starter-kit
                       magit
                       git-rebase-mode
@@ -76,7 +76,6 @@
                       find-file-in-project
                       idle-highlight-mode
                       paredit
-                      inf-ruby
                       tern
                       undo-tree
                       web-beautify

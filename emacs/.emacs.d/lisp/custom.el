@@ -3,9 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(android-mode-avd "default")
- '(android-mode-sdk-dir "~/devel/android/sdk")
- '(company-idle-delay 0.3)
+ '(company-idle-delay 0.2)
  '(company-minimum-prefix-length 1)
  '(custom-safe-themes
    (quote
@@ -14,7 +12,6 @@
  '(display-time-24hr-format t)
  '(display-time-mode t)
  '(global-linum-mode t)
- ;;'(ido-show-dot-for-dired t)
  '(inhibit-startup-screen t)
  '(scroll-conservatively 101)
  '(sr-speedbar-right-side nil)
@@ -26,6 +23,8 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 180 :width normal))))
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#d3d3d3"))))
- '(rainbow-delimiters-depth-9-face ((t (:foreground "##8b0000")))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "#add8e6"))))
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "#00aaff"))))
+ '(rainbow-delimiters-depth-9-face ((t (:foreground "#cfc300")))))
 
 (provide 'custom)
