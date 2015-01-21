@@ -11,6 +11,7 @@
 
 (defvar my-packages '(android-mode
                       align-cljlet
+                      arduino-mode
                       auto-compile
                       auto-dictionary
                       better-defaults
