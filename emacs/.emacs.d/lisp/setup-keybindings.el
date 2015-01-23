@@ -75,4 +75,10 @@
 ;;(global-unset-key (kbd "C-x C-o"))
 (global-set-key (kbd "C-x C-o") 'ffip)
 
+;; BEGIN helm
+;;(global-set-key (kbd "M-x") 'helm-M-x)
+;;(global-set-key (kbd "C-x C-f") 'helm-find-files)
+;;(global-set-key (kbd "C-x b") 'helm-buffers-list)
+;; END   helm
+
 (provide 'setup-keybindings)

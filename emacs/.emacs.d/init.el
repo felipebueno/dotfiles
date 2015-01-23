@@ -25,9 +25,9 @@
 (require 'setup-eshell)
 (require 'setup-org)
 
+;;(require 'setup-helm)
 ;;(require 'setup-java)
 ;;(require 'setup-android)
-
 
 ;; OSX specific settings
 (when (eq system-type 'darwin)
