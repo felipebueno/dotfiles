@@ -36,6 +36,7 @@
                       dired-details
                       emr
                       expand-region
+                      ;;emacs-eclim
                       f
                       flycheck
                       flymake-python-pyflakes
