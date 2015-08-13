@@ -6,7 +6,7 @@
 
 (setq temporary-file-directory "~/.emacs.d/tmp")
 
-(setq-default tab-width 4)
+(setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
 
 ;; Allow pasting selection outside of Emacs

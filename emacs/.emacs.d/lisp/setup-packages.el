@@ -1,87 +1,46 @@
 (require 'package)
-(package-initialize)
-(when (not package-archive-contents)
-    (package-refresh-contents))
-
-;; (add-to-list 'package-archives
-;;              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 (add-to-list 'package-archives
-             '("melpa-stable" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa" . "http://melpa.org/packages/"))
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 
-(defvar my-packages '(android-mode
-                      align-cljlet
-                      arduino-mode
-                      auto-compile
-                      auto-dictionary
-                      better-defaults
-                      ;;cider-browse-ns
-                      cider-decompile
-                      ;;cider-tracing
-                      clj-refactor
-                      cljsbuild-mode
-                      clojure-cheatsheet
-                      clojure-mode-extra-font-locking
-                      clojure-snippets
-                      ;;company-cider
-                      cider
+(package-initialize)
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+(defvar my-packages '(better-defaults
+                      paredit
                       clojure-mode
-                      company-go
-                      company-tern
+                      ;;clj-refactor
+                      clojure-mode-extra-font-locking
+                      cider
                       company
-                      cyberpunk-theme
-                      dash-functional
-                      dired+
-                      dired-details+
-                      dired-details
-                      emr
-                      expand-region
-                      ;;emacs-eclim
-                      f
-                      flycheck
-                      flymake-python-pyflakes
-                      flymake-easy
-                      helm
-                      java-snippets
-                      javadoc-lookup
-                      javap-mode
-                      js-comint
-                      js-doc
-                      js2-refactor
-                      js2-mode
-                      jtags
-                      list-utils
-                      neotree
-                      fringe-helper
-                      move-text
-                      multiple-cursors
-                      packed
-                      popup
-                      projectile
-                      pkg-info
-                      epl
-                      dash
-                      redshank
-                      request
-                      s
-                      starter-kit-bindings
-                      starter-kit-eshell
-                      starter-kit-js
-                      starter-kit-lisp
-                      elisp-slime-nav
-                      starter-kit
-                      magit
-                      git-rebase-mode
-                      git-commit-mode
                       ido-ubiquitous
                       smex
+                      projectile
+                      rainbow-delimiters
+                      starter-kit-lisp
+                      cider-eval-sexp-fu
+                      nrepl-eval-sexp-fu
+                      ;; edit html tags like sexps
+                      tagedit
+                      magit
+                      cyberpunk-theme
+                      f
+                      flycheck
+                      helm
+                      move-text
+                      multiple-cursors
+                      pkg-info
+                      dash
                       find-file-in-project
                       idle-highlight-mode
-                      paredit
-                      tern
                       undo-tree
-                      web-beautify
-                      yasnippet))
+                      yasnippet                      
+                      ;; colorful parenthesis matching
+                      rainbow-identifiers))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
