@@ -33,9 +33,10 @@
 (require 'setup-eshell)
 (require 'setup-org)
 
+(require 'setup-clojure)
+
 (require 'server)
 (unless (server-running-p)
   (server-start))
 
-(require 'setup-clojure)
-
+(toggle-fullscreen)

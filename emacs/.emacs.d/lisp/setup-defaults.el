@@ -50,15 +50,7 @@
 
 (setq eval-expression-print-level nil)
 
-(set-face-attribute 'linum nil :background "#00CC00")
-(set-face-attribute 'linum nil :foreground "#880000")
-(set-face-attribute 'linum nil :weight 'ultra-bold)
-
 (when (fboundp 'winner-mode)
   (winner-mode 1))
-
-;; Clojure
-(setq nrepl-log-messages t)
-;; end Clojure
 
 (provide 'setup-defaults)

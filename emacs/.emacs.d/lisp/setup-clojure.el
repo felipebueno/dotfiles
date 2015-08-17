@@ -68,4 +68,6 @@
 (add-to-list 'auto-mode-alist '("\\.cljs.*$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("lein-env" . enh-ruby-mode))
 
+(setq nrepl-log-messages t)
+
 (provide 'setup-clojure)

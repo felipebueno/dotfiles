@@ -23,7 +23,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (nrepl-eval-sexp-fu cider-eval-sexp-fu magit multiple-cursors smex yasnippet clojure-mode cider rainbow-identifiers rainbow-delimiters tagedit undo-tree starter-kit-lisp projectile move-text helm flycheck f cyberpunk-theme company clojure-mode-extra-font-locking better-defaults)))
+    (vala-mode clj-refactor yasnippet undo-tree tagedit starter-kit-lisp rainbow-identifiers rainbow-delimiters projectile nrepl-eval-sexp-fu multiple-cursors move-text helm flycheck f cyberpunk-theme company clojure-mode-extra-font-locking cider-eval-sexp-fu cider better-defaults)))
  '(scroll-conservatively 101)
  '(sr-speedbar-right-side nil)
  '(truncate-lines t))
@@ -33,6 +33,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 160 :width normal))))
+ '(linum ((t (:background "dark green" :foreground "light gray" :weight ultra-bold))))
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#d3d3d3"))))
  '(rainbow-delimiters-depth-2-face ((t (:foreground "#add8e6"))))
  '(rainbow-delimiters-depth-6-face ((t (:foreground "#00aaff"))))

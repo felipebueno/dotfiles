@@ -13,7 +13,7 @@
 (defvar my-packages '(better-defaults
                       paredit
                       clojure-mode
-                      ;;clj-refactor
+                      ;;clj-refactor ;; https://github.com/clojure-emacs/clj-refactor.el/issues/184#issuecomment-130728613
                       clojure-mode-extra-font-locking
                       cider
                       company
@@ -40,7 +40,10 @@
                       undo-tree
                       yasnippet                      
                       ;; colorful parenthesis matching
-                      rainbow-identifiers))
+                      rainbow-identifiers
+                      ;; Pixie programming language
+                      pixie-mode
+                      ))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
