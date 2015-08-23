@@ -1,1 +1,9 @@
-npm-debug.log
+# Emacs stuff
+cider-history
+ido.last
+recentf
+
+
+# Leiningen stuff
+repl-port
+self-installs/
