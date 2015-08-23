@@ -52,7 +52,7 @@
 ;; Use M-w for copy-line if no active region
 (global-set-key (kbd "M-w") 'save-region-or-current-line)
 (global-set-key (kbd "C-w") 'kill-region-or-current-line)
-(global-set-key (kbd "M-S-d") 'duplicate-line)
+(global-set-key (kbd "C-S-d") 'duplicate-line)
 
 
 (global-set-key [f12] 'neotree-toggle)
@@ -69,8 +69,8 @@
 (global-set-key (kbd "<down>") 'enlarge-window)
 
 ;; Shortcuts for move-text (installed thru melpa)
-(global-set-key (kbd "C-x p") 'move-text-up)
-(global-set-key (kbd "C-x n") 'move-text-down)
+(global-set-key (kbd "C-S-p") 'move-text-up)
+(global-set-key (kbd "C-S-n") 'move-text-down)
 
 ;;(global-unset-key (kbd "C-x C-o"))
 (global-set-key (kbd "C-x C-o") 'ffip)
