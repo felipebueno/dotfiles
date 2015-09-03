@@ -2,46 +2,48 @@
 
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/"))
-(when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 
 (package-initialize)
 (when (not package-archive-contents)
   (package-refresh-contents))
 
 (defvar my-packages '(better-defaults
-                      paredit
-                      clojure-mode
-                      clj-refactor ;; https://github.com/clojure-emacs/clj-refactor.el/issues/184#issuecomment-130728613
-                      clojure-mode-extra-font-locking
                       cider
+                      clj-refactor ;; https://github.com/clojure-emacs/clj-refactor.el/issues/184#issuecomment-130728613
+                      clojure-mode
+                      clojure-mode-extra-font-locking
+                      clojure-snippets
                       company
-                      ido-ubiquitous
-                      smex
-                      projectile
-                      rainbow-delimiters
-                      starter-kit-lisp
-                      cider-eval-sexp-fu
-                      nrepl-eval-sexp-fu
-                      ;; edit html tags like sexps
-                      tagedit
-                      magit
+                      company-c-headers
+                      ctags-update
                       cyberpunk-theme
+                      dash
+                      dired-rainbow
+                      elpy
                       f
+                      find-file-in-project
                       flycheck
+                      ggtags
                       helm
+                      idle-highlight-mode
+                      ido-ubiquitous
+                      magit
+                      markdown-mode+
+                      moe-theme
                       move-text
                       multiple-cursors
+                      paredit
                       pkg-info
-                      dash
-                      find-file-in-project
-                      idle-highlight-mode
+                      projectile
+                      pyvenv
+                      rainbow-delimiters
+                      smex
+                      sotclojure
+                      starter-kit
+                      starter-kit-lisp
+                      tagedit ;; edit html tags like sexps
                       undo-tree
                       yasnippet
-                      ;; colorful parenthesis matching
-                      rainbow-identifiers
-                      markdown-mode+
                       ))
 
 (dolist (p my-packages)

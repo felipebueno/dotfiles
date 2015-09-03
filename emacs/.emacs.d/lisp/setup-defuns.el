@@ -1,6 +1,3 @@
-(defun cyberpunk-init ()
-  (load-theme 'cyberpunk))
-
 (defun toggle-fullscreen ()
   "Toggle full screen on X11"
   (interactive)

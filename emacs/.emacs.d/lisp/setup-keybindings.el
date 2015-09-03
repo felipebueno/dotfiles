@@ -38,7 +38,6 @@
 
 ;; Use shell-like backspace C-h, rebind help to F1
 (define-key key-translation-map [?\C-h] [?\C-?])
-
 (global-set-key (kbd "<f1>") 'help-command)
 
 
@@ -46,7 +45,6 @@
 (global-unset-key (kbd "M-t")) ;; which used to be transpose-words
 (global-set-key (kbd "M-t w") 'transpose-words)
 (global-set-key (kbd "M-t s") 'transpose-sexps)
-(global-set-key (kbd "M-t p") 'transpose-params)
 
 
 ;; Use M-w for copy-line if no active region
@@ -55,7 +53,6 @@
 (global-set-key (kbd "C-S-d") 'duplicate-line)
 
 
-(global-set-key [f12] 'neotree-toggle)
 (global-set-key (kbd "ESC <right>") 'paredit-forward-slurp-sexp)
 (global-set-key (kbd "ESC <left>") 'paredit-forward-barf-sexp)
 
@@ -74,11 +71,5 @@
 
 ;;(global-unset-key (kbd "C-x C-o"))
 (global-set-key (kbd "C-x C-o") 'ffip)
-
-;; BEGIN helm
-;;(global-set-key (kbd "M-x") 'helm-M-x)
-;;(global-set-key (kbd "C-x C-f") 'helm-find-files)
-;;(global-set-key (kbd "C-x b") 'helm-buffers-list)
-;; END   helm
 
 (provide 'setup-keybindings)

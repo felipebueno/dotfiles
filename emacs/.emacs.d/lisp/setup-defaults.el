@@ -1,11 +1,3 @@
-(setq custom-file "~/.emacs.d/lisp/custom.el")
-(if (file-exists-p custom-file)
-    (load-file custom-file))
-
-(setq source-directory "~/devel/src/emacs24/emacs24-24.3+1" )
-
-(setq temporary-file-directory "~/.emacs.d/tmp")
-
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
 
@@ -24,9 +16,6 @@
 
 ;; Move files to trash when deleting
 (setq delete-by-moving-to-trash t)
-
-;; Real emacs knights don't use shift to mark things
-(setq shift-select-mode nil)
 
 ;; Transparently open compressed files
 (auto-compression-mode t)
