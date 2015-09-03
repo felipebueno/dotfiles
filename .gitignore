@@ -7,3 +7,4 @@ recentf
 # Leiningen stuff
 repl-port
 self-installs/
+/lein/.lein/repl-history
