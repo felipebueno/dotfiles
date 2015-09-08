@@ -36,4 +36,4 @@
 
 (require 'setup-colors-and-themes)
 
-;;(toggle-frame-fullscreen)
+(toggle-frame-fullscreen)
