@@ -1,7 +1,7 @@
 (require 'package)
 
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/"))
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 (package-initialize)
 (when (not package-archive-contents)
@@ -14,31 +14,19 @@
                       clojure-mode-extra-font-locking
                       clojure-snippets
                       company
-                      company-c-headers
-                      ctags-update
                       cyberpunk-theme
-                      dash
-                      dired-rainbow
-                      elpy
-                      f
-                      find-file-in-project
-                      flycheck
-                      ggtags
+                      dockerfile-mode
+                      exec-path-from-shell
                       helm
                       idle-highlight-mode
                       ido-ubiquitous
                       magit
-                      markdown-mode+
-                      moe-theme
-                      move-text
                       multiple-cursors
-                      paredit
-                      pkg-info
                       projectile
-                      pyvenv
                       rainbow-delimiters
+                      slime
                       smex
-                      sotclojure
+                      solarized-theme
                       starter-kit
                       starter-kit-lisp
                       tagedit ;; edit html tags like sexps
