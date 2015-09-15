@@ -23,10 +23,12 @@
 (require 'setup-org)
 
 (require 'setup-clojure)
-(require 'setup-python)
+;;(require 'setup-python)
 
 (require 'setup-helm)
-(require 'setup-ggtags)
+;;(require 'setup-ggtags)
+
+(require 'setup-kawa)
 
 (require 'setup-scratch-buffer)
 
@@ -36,4 +38,5 @@
 
 (require 'setup-colors-and-themes)
 
-(toggle-frame-fullscreen)
+;;(toggle-frame-fullscreen)
+

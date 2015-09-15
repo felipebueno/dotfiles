@@ -1,3 +1,5 @@
+(require 'move-text)
+
 (defun toggle-fullscreen ()
   "Toggle full screen on X11"
   (interactive)
