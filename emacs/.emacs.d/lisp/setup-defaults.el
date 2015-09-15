@@ -1,3 +1,8 @@
+(setq ring-bell-function #'ignore)
+
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
 
