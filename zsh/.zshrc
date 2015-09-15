@@ -19,7 +19,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export JAVA_HOME=$(/usr/libexec/java_home)
-#export JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 export ANDROID_HOME=$HOME/devel/tools/adt-bundle-mac-x86_64-20140702/sdk
 
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/devel/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:/usr/local/bin"
@@ -29,6 +28,5 @@ export EDITOR='emacs'
 export DEVKITPRO=$HOME/devel/tools/devkitPro
 export DEVKITARM=$DEVKITPRO/devkitARM
 
-#alias git=hub
 alias em='emacsclient -nw -c $1'
 set -k
