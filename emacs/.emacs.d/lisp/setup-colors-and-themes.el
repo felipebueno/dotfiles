@@ -5,6 +5,9 @@
 ;;                              (load-theme 'moe-dark t)
 ;;                              (moe-theme-set-color 'green)))
 
+(add-hook 'after-init-hook
+          (lambda () (load-theme 'solarized-light t)))
+
 (add-hook 'prog-mode-hook  'rainbow-delimiters-mode)
 
 (provide 'setup-colors-and-themes)
