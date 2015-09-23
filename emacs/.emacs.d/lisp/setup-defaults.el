@@ -1,3 +1,5 @@
+(setq source-directory "~/devel/src/emacs")
+
 (setq ring-bell-function #'ignore)
 
 (when (memq window-system '(mac ns))
