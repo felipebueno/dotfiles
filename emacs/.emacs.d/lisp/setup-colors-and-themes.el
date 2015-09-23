@@ -5,6 +5,10 @@
 ;;                              (load-theme 'moe-dark t)
 ;;                              (moe-theme-set-color 'green)))
 
+(defadvice load-theme
+  (before theme-dont-propagate activate)
+  (mapcar #'disable-theme custom-enabled-themes))
+
 (add-hook 'after-init-hook
           (lambda () (load-theme 'solarized-light t)))
 
