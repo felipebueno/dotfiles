@@ -15,12 +15,16 @@
                       clojure-snippets
                       company
                       cyberpunk-theme
+                      dart-mode
                       dockerfile-mode
                       exec-path-from-shell
+                      haskell-mode
+                      haskell-snippets
                       helm
                       idle-highlight-mode
                       ido-ubiquitous
                       magit
+                      markdown-mode
                       multiple-cursors
                       projectile
                       rainbow-delimiters
@@ -31,6 +35,7 @@
                       starter-kit-lisp
                       tagedit ;; edit html tags like sexps
                       undo-tree
+                      yaml-mode
                       yasnippet
                       ))
 
