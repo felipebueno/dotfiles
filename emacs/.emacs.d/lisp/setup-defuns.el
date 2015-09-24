@@ -1,13 +1,5 @@
 (require 'move-text)
 
-(defun toggle-fullscreen ()
-  "Toggle full screen on X11"
-  (interactive)
-  (when (eq window-system 'x)
-    (set-frame-parameter
-     nil 'fullscreen
-     (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
-
 (defun google ()
   "Google the selected region if any, display a query prompt otherwise."
   (interactive)
