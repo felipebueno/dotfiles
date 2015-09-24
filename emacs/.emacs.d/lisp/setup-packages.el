@@ -15,6 +15,7 @@
                       clojure-snippets
                       company
                       cyberpunk-theme
+                      darkroom
                       dart-mode
                       dockerfile-mode
                       exec-path-from-shell
