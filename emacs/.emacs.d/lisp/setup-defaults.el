@@ -1,5 +1,7 @@
 (setq source-directory "~/devel/src/emacs")
 
+(put 'narrow-to-region 'disabled nil)
+
 (setq ring-bell-function #'ignore)
 
 (when (memq window-system '(mac ns))
