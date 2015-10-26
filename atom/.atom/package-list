@@ -4,7 +4,6 @@ atom-fix-path@0.1.0
 atom-format-lua@0.0.6
 autocomplete-glsl@0.2.3
 autocomplete-modules@1.3.0
-build@0.47.0
 build-gulp@0.2.0
 editorconfig@1.2.0
 git-plus@5.4.7
@@ -17,7 +16,7 @@ language-javascript-jsx@0.3.7
 language-lua@0.9.4
 language-scheme@1.4.0
 license-plus@1.2.5
-linter@1.9.0
+linter@1.9.1
 linter-clojure@1.0.0
 linter-elm-make@0.3.0
 linter-lua@1.0.0
