@@ -1,0 +1,30 @@
+reactactoe:
+  title: "ReacTacToe"
+  paths: [
+    "/Users/felipe/devel/github/sneerteam/spikes/ReacTacToe"
+  ]
+"hackernews-react-native":
+  title: "HackerNews-React-Native"
+  paths: [
+    "/Users/felipe/devel/playground/react-native/HackerNews-React-Native"
+  ]
+"react-native-sneer":
+  title: "react-native-sneer"
+  paths: [
+    "/Users/felipe/devel/github/sneerteam/react-native-sneer"
+  ]
+hain1:
+  title: "HaiN1"
+  paths: [
+    "/Users/felipe/.nylas/dev/packages/HaiN1"
+  ]
+piconsole:
+  title: "PiConsole"
+  paths: [
+    "/Users/felipe/devel/playground/pico-8/piconsole"
+  ]
+awesomeproject:
+  title: "AwesomeProject"
+  paths: [
+    "/Users/felipe/devel/playground/react-native/AwesomeProject"
+  ]

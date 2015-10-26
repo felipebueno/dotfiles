@@ -1,0 +1,58 @@
+"*":
+  "exception-reporting":
+    userId: "2cf02181-b7cb-8471-011e-d354c6665df7"
+  welcome:
+    showOnStartup: false
+  "language-elm":
+    elmOraclePath: "/usr/local/bin/elm-oracle"
+  core:
+    disabledPackages: [
+      "metrics"
+      "love-ide"
+      "love-atom"
+      "linter-elm-make"
+      "language-javascript-jsx"
+      "jshint"
+      "atom-format-lua"
+      "autocomplete-glsl"
+      "build-gulp"
+      "Stylus"
+      "language-elm"
+      "license-plus"
+    ]
+    themes: [
+      "one-light-ui"
+      "solarized-light-syntax"
+    ]
+    projectHome: "/Users/felipe/devel/"
+  editor:
+    invisibles: {}
+    fontFamily: "Ubuntu Mono"
+    fontSize: 16
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+  minimap: {}
+  linter: {}
+  "linter-elm-make": {}
+  "markdown-writer": {}
+  "love-ide": {}
+  "linter-lua":
+    executablePath: "/usr/local/bin/luac"
+  "git-plus": {}
+  deprecated:
+    tool:
+      gulp: true
+  build:
+    scrollOnError: true
+  "autocomplete-plus":
+    minimumWordLength: 1
+  react: {}
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
+  nuclide:
+    remoteProjectsConfig: []
+  "project-manager": {}
+  "terminal-panel": {}
+".elm.source":
+  editor:
+    autoIndentOnPaste: true
