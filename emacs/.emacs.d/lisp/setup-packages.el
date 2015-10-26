@@ -3,6 +3,9 @@
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/"))
+
 (package-initialize)
 (when (not package-archive-contents)
   (package-refresh-contents))
@@ -18,6 +21,7 @@
                       darkroom
                       dart-mode
                       dockerfile-mode
+                      elm-mode
                       exec-path-from-shell
                       haskell-mode
                       haskell-snippets
