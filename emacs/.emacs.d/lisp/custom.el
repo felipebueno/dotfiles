@@ -39,6 +39,7 @@
  '(erc-track-minor-mode t)
  '(erc-track-mode t)
  '(fci-rule-color "#383838")
+ '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
  '(global-linum-mode t)
  '(helm-M-x-fuzzy-match t)
  '(helm-apropos-fuzzy-match t)

@@ -3,8 +3,8 @@
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
+;; (add-to-list 'package-archives
+;;              '("melpa" . "https://melpa.org/packages/"))
 
 (package-initialize)
 (when (not package-archive-contents)
@@ -18,28 +18,27 @@
                       clojure-snippets
                       company
                       cyberpunk-theme
-                      darkroom
-                      dart-mode
                       dockerfile-mode
-                      elm-mode
+                      editorconfig
                       exec-path-from-shell
-                      haskell-mode
-                      haskell-snippets
-                      helm
+                      flycheck
                       idle-highlight-mode
                       ido-ubiquitous
+                      js2-mode
+                      ;;json-mode
                       magit
                       markdown-mode
                       multiple-cursors
                       projectile
                       rainbow-delimiters
-                      slime
+                      react-snippets
                       smex
                       solarized-theme
                       starter-kit
                       starter-kit-lisp
                       tagedit ;; edit html tags like sexps
                       undo-tree
+                      web-mode
                       yaml-mode
                       yasnippet
                       ))
