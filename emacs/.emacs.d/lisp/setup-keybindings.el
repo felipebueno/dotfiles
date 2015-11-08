@@ -33,15 +33,16 @@
 
 
 ;; Toggle fullscreen
-(global-set-key [f11] 'toggle-fullscreen)
+(global-set-key [f11] 'toggle-frame-fullscreen)
 
 
 ;; Use shell-like backspace C-h, rebind help to F1
 (define-key key-translation-map [?\C-h] [?\C-?])
 (global-set-key (kbd "<f1>") 'help-command)
+(global-set-key (kbd "M-h") 'backward-kill-word)
+(global-set-key (kbd "C-M-h") 'backward-kill-word)
 
-
-;; Transpose stuff with M-t
+;; stuff with M-t
 (global-unset-key (kbd "M-t")) ;; which used to be transpose-words
 (global-set-key (kbd "M-t w") 'transpose-words)
 (global-set-key (kbd "M-t s") 'transpose-sexps)
