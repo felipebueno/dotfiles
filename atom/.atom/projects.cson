@@ -28,3 +28,23 @@ awesomeproject:
   paths: [
     "/Users/felipe/devel/playground/react-native/AwesomeProject"
   ]
+dotfiles:
+  title: "dotfiles"
+  paths: [
+    "/Users/felipe/dotfiles"
+  ]
+"my-gists":
+  title: "my-gists"
+  paths: [
+    "/Users/felipe/devel/github/felipebueno/my-gists"
+  ]
+"awesome-pico-8":
+  title: "awesome-PICO-8"
+  paths: [
+    "/Users/felipe/devel/github/felipebueno/awesome-PICO-8"
+  ]
+reactivelizard:
+  title: "ReactiveLizard"
+  paths: [
+    "/Users/felipe/devel/github/felipebueno/ReactiveLizard"
+  ]

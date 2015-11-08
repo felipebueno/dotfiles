@@ -9,16 +9,15 @@
     disabledPackages: [
       "metrics"
       "love-ide"
-      "love-atom"
       "linter-elm-make"
-      "language-javascript-jsx"
-      "jshint"
       "atom-format-lua"
       "autocomplete-glsl"
       "build-gulp"
       "Stylus"
       "language-elm"
-      "license-plus"
+      "love-atom"
+      "linter-clojure"
+      "jshint"
     ]
     themes: [
       "one-light-ui"
@@ -28,11 +27,12 @@
   editor:
     invisibles: {}
     fontFamily: "Ubuntu Mono"
-    fontSize: 16
-    softWrap: true
-    softWrapAtPreferredLineLength: true
+    fontSize: 17
+    softWrap: false
+    softWrapAtPreferredLineLength: false
   minimap: {}
-  linter: {}
+  linter:
+    errorPanelHeight: 120
   "linter-elm-make": {}
   "markdown-writer": {}
   "love-ide": {}
@@ -49,10 +49,15 @@
   react: {}
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
-  nuclide:
-    remoteProjectsConfig: []
   "project-manager": {}
   "terminal-panel": {}
+  Zen: {}
+  emmet: {}
+  jshint:
+    supportLintingJsx: true
+  "linter-eslint":
+    lintHtmlFiles: true
+    useGlobalEslint: true
 ".elm.source":
   editor:
     autoIndentOnPaste: true
