@@ -84,7 +84,6 @@
  '(sr-speedbar-right-side nil)
  '(term-default-bg-color "#002b36")
  '(term-default-fg-color "#839496")
- '(truncate-lines t)
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
