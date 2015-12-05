@@ -22,6 +22,7 @@
                       editorconfig
                       exec-path-from-shell
                       flycheck
+                      flycheck-clojure
                       flycheck-color-mode-line
                       idle-highlight-mode
                       ido-ubiquitous
