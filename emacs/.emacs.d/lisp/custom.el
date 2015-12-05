@@ -79,11 +79,13 @@
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(scroll-conservatively 101)
+ '(send-mail-function (quote mailclient-send-it))
  '(show-trailing-whitespace t)
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
  '(sr-speedbar-right-side nil)
  '(term-default-bg-color "#002b36")
  '(term-default-fg-color "#839496")
+ '(truncate-lines t)
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
@@ -118,7 +120,7 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 180 :width normal))))
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#ffa500"))))
- '(rainbow-delimiters-depth-7-face ((t (:foreground "#ffffff"))))
- '(rainbow-delimiters-depth-9-face ((t (:foreground "Red")))))
+ '(rainbow-delimiters-depth-7-face ((t (:foreground "Red"))))
+ '(rainbow-delimiters-depth-9-face ((t (:foreground "selectedTextBackgroundColor")))))
 
 (provide 'custom)
