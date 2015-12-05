@@ -1,2 +1,0 @@
-'.platform-darwin, .platform-darwin .command-palette atom-text-editor':
-  'alt-x': 'command-palette:toggle'
