@@ -14,6 +14,5 @@ cd dotfiles
 
 stow bash
 stow zsh
-stow atom
 stow emacs
 ```
