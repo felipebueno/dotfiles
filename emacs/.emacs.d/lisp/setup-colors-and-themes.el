@@ -9,8 +9,8 @@
   (before theme-dont-propagate activate)
   (mapcar #'disable-theme custom-enabled-themes))
 
-(add-hook 'after-init-hook
-          (lambda () (load-theme 'solarized-light t)))
+;; (add-hook 'after-init-hook
+;;           (lambda () (load-theme 'solarized-light t)))
 
 (add-hook 'prog-mode-hook  'rainbow-delimiters-mode)
 

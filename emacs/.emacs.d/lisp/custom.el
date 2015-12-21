@@ -5,6 +5,10 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector
    ["#000000" "#8b0000" "#00ff00" "#ffa500" "#7b68ee" "#dc8cc3" "#93e0e3" "#dcdccc"])
+ '(cider-prompt-for-symbol nil)
+ '(cider-repl-history-file "~/.emacs.d/cider-history" t)
+ '(cider-repl-result-prefix ";; => " t)
+ '(cider-repl-wrap-history t t)
  '(company-idle-delay 0.2)
  '(company-minimum-prefix-length 1)
  '(company-tooltip-minimum-width 30)
@@ -15,7 +19,7 @@
  '(cua-read-only-cursor-color "#859900")
  '(custom-safe-themes
    (quote
-    ("a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "c7e8605c82b636fc489340e8276a3983745891e18e77440bbae305d1b5af9201" default)))
+    ("88cac3cdd1edc9e90074d8119cc9b14764b5e7e9944d92a582406c9e67bdacdc" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "c7e8605c82b636fc489340e8276a3983745891e18e77440bbae305d1b5af9201" default)))
  '(dired-use-ls-dired t)
  '(display-battery-mode t)
  '(display-time-24hr-format t)
@@ -39,7 +43,7 @@
  '(erc-track-minor-mode t)
  '(erc-track-mode t)
  '(fci-rule-color "#383838")
- '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
+ '(flycheck-check-syntax-automatically (quote (save idle-change new-line mode-enabled)))
  '(global-linum-mode t)
  '(helm-M-x-fuzzy-match t)
  '(helm-apropos-fuzzy-match t)
@@ -73,6 +77,7 @@
    (quote
     ("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
  '(inhibit-startup-screen t)
+ '(isearch-lazy-highlight nil)
  '(line-number-mode nil)
  '(magit-diff-use-overlays nil)
  '(menu-bar-mode nil)
@@ -85,6 +90,7 @@
  '(sr-speedbar-right-side nil)
  '(term-default-bg-color "#002b36")
  '(term-default-fg-color "#839496")
+ '(term-input-ignoredups t)
  '(truncate-lines t)
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
@@ -119,8 +125,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 180 :width normal))))
+ '(eval-sexp-fu-flash ((t (:background "brightmagenta" :foreground "white" :weight bold))))
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#ffa500"))))
  '(rainbow-delimiters-depth-7-face ((t (:foreground "Red"))))
- '(rainbow-delimiters-depth-9-face ((t (:foreground "selectedTextBackgroundColor")))))
+ '(rainbow-delimiters-depth-9-face ((t (:foreground "selectedTextBackgroundColor"))))
+ '(term ((t (:inherit default :background "#ffffff" :foreground "#000000"))))
+ '(term-color-blue ((t (:background "color-39" :foreground "color-39")))))
 
 (provide 'custom)
