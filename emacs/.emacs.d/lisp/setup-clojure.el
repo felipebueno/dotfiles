@@ -1,5 +1,7 @@
 ;; Clojure stuff
 (require 'clojure-mode)
+(require 'cider-eval-sexp-fu)
+
 (put-clojure-indent 'match 1)
 (put-clojure-indent 'fact 1)
 (put-clojure-indent 'go-while-let 1)

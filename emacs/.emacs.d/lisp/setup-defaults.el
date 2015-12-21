@@ -1,5 +1,8 @@
 (setq source-directory "~/devel/src/emacs")
 
+;; Use Emacs terminfo, not system terminfo
+(setq system-uses-terminfo nil)
+
 (put 'narrow-to-region 'disabled nil)
 
 (setq ring-bell-function #'ignore)

@@ -11,7 +11,7 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-x C-m") 'smex)
 
-(global-set-key (kbd "<f12>") 'sr-speedbar-toggle)
+(global-set-key (kbd "<f12>") 'shell-toggle)
 
 
 ;; Expand region (increases selected region by semantic units)
@@ -71,6 +71,6 @@
 (global-set-key (kbd "C-S-n") 'move-text-down)
 
 ;;(global-unset-key (kbd "C-x C-o"))
-(global-set-key (kbd "C-x C-o") 'ffip)
+(global-set-key (kbd "C-x C-o") 'projectile-find-file)
 
 (provide 'setup-keybindings)
