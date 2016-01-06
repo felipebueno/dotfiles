@@ -27,6 +27,35 @@
 
 (require 'setup-helm)
 
+
+
+;; BEGIN lua-mode things (move it to a setup-lua.el file)
+(add-hook 'lua-mode-hook 'smartparens-mode)
+;; END lua-mode
+
+
+
+
+;; BEGIN move this to a setup-flx-ido.el
+(require 'flx-ido)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+(setq ido-enable-flex-matching t) ;; disable ido faces to see flx highlights.
+(setq ido-use-faces nil)
+;; END move this to a setup-flx-ido.el
+
+
+;; BEGIN move this to a setup-projectile.el
+(projectile-global-mode)
+(setq projectile-enable-caching t)
+;; END move this to a setup-projectile.el
+
+
+
+
+
+
 (require 'setup-scratch-buffer)
 
 (setq custom-file "~/.emacs.d/lisp/custom.el")
