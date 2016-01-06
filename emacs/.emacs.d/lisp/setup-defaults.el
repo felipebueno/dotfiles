@@ -1,5 +1,15 @@
 (setq source-directory "~/devel/src/emacs")
 
+;; Enable mouse actions on terminal - https://bitheap.org/mouseterm/
+(unless window-system
+  (xterm-mouse-mode 1)
+  (global-set-key [mouse-4] '(lambda ()
+                               (interactive)
+                               (scroll-down 1)))
+  (global-set-key [mouse-5] '(lambda ()
+                               (interactive)
+                               (scroll-up 1))))
+
 ;; Enables the kill-ring to interact with the clipboard when running Emacs from a Mac OSX terminal (without losing full kill-ring functionality) https://github.com/wesen/emacs/blob/master/pbcopy.el
 (require 'pbcopy)
 (turn-on-pbcopy)
