@@ -19,6 +19,7 @@
                       clojure-snippets
                       clojure-cheatsheet
                       company
+                      company-statistics
                       cyberpunk-theme
                       dockerfile-mode
                       editorconfig
@@ -26,15 +27,22 @@
                       flycheck
                       flycheck-clojure
                       flycheck-color-mode-line
+                      flx-ido
                       gradle-mode
+                      helm
+                      helm-projectile
                       idle-highlight-mode
                       ido-ubiquitous
                       js2-mode
                       json-mode
+                      lua-mode
+                      love-minor-mode
+                      flymake-lua
                       magit
                       markdown-mode
                       multiple-cursors
                       nrepl-eval-sexp-fu
+                      pbcopy ;; Enables the kill-ring to interact with the clipboard when running Emacs from a Mac OSX terminal (without losing full kill-ring functionality) https://github.com/wesen/emacs/blob/master/pbcopy.el
                       projectile
                       rainbow-delimiters
                       react-snippets
@@ -46,6 +54,7 @@
                       tagedit ;; edit html tags like sexps
                       undo-tree
                       web-mode
+                      web-beautify
                       yaml-mode
                       yasnippet
                       ))
