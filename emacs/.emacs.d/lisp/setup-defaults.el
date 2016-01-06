@@ -1,5 +1,12 @@
 (setq source-directory "~/devel/src/emacs")
 
+;; Enables the kill-ring to interact with the clipboard when running Emacs from a Mac OSX terminal (without losing full kill-ring functionality) https://github.com/wesen/emacs/blob/master/pbcopy.el
+(require 'pbcopy)
+(turn-on-pbcopy)
+
+;; GC Optimization - https://github.com/lewang/flx#gc-optimization
+(setq gc-cons-threshold 20000000)
+
 ;; Use Emacs terminfo, not system terminfo
 (setq system-uses-terminfo nil)
 
