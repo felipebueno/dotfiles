@@ -6,9 +6,9 @@
  '(ansi-color-names-vector
    ["#000000" "#8b0000" "#00ff00" "#ffa500" "#7b68ee" "#dc8cc3" "#93e0e3" "#dcdccc"])
  '(cider-prompt-for-symbol nil)
- '(cider-repl-history-file "~/.emacs.d/cider-history" t)
- '(cider-repl-result-prefix ";; => " t)
- '(cider-repl-wrap-history t t)
+ '(cider-repl-history-file "~/.emacs.d/cider-history")
+ '(cider-repl-result-prefix ";; => ")
+ '(cider-repl-wrap-history t)
  '(company-idle-delay 0.2)
  '(company-minimum-prefix-length 1)
  '(company-tooltip-minimum-width 30)
@@ -77,8 +77,8 @@
    (quote
     ("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
  '(inhibit-startup-screen t)
- '(isearch-lazy-highlight nil)
  '(line-number-mode nil)
+ '(lua-indent-level 2)
  '(magit-diff-use-overlays nil)
  '(menu-bar-mode nil)
  '(pos-tip-background-color "#073642")
