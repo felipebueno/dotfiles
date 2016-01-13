@@ -10,7 +10,8 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(better-defaults
+(defvar my-packages '(
+                      better-defaults
                       cider
                       cider-eval-sexp-fu
                       clj-refactor ;; https://github.com/clojure-emacs/clj-refactor.el/issues/184#issuecomment-130728613
@@ -33,6 +34,7 @@
                       helm-projectile
                       idle-highlight-mode
                       ido-ubiquitous
+                      jdee
                       js2-mode
                       json-mode
                       lua-mode
@@ -53,8 +55,8 @@
                       starter-kit-lisp
                       tagedit ;; edit html tags like sexps
                       undo-tree
-                      web-mode
                       web-beautify
+                      web-mode
                       yaml-mode
                       yasnippet
                       ))
