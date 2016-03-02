@@ -30,6 +30,7 @@
                       flycheck-color-mode-line
                       flx-ido
                       gradle-mode
+                      groovy-mode
                       helm
                       helm-projectile
                       idle-highlight-mode
