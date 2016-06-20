@@ -14,7 +14,7 @@
 ;; Clojure
 ;;;;
 
-(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+;;(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
 (add-hook 'clojure-mode-hook 'clj-refactor-mode)
 (add-hook 'clojure-mode-hook 'enable-paredit-mode)
@@ -49,7 +49,7 @@
 (setq cider-repl-history-file "~/.cider-nrepl_history")
 
 ;; provides minibuffer documentation for the code you're typing into the repl
-(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+;; (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 
 ;; go right to the REPL buffer when it's finished connecting
 (setq cider-repl-pop-to-buffer-on-connect t)

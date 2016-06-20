@@ -6,9 +6,9 @@
  '(ansi-color-names-vector
    ["#000000" "#8b0000" "#00ff00" "#ffa500" "#7b68ee" "#dc8cc3" "#93e0e3" "#dcdccc"])
  '(cider-prompt-for-symbol nil)
- '(cider-repl-history-file "~/.emacs.d/cider-history")
- '(cider-repl-result-prefix ";; => ")
- '(cider-repl-wrap-history t)
+ '(cider-repl-history-file "~/.emacs.d/cider-history" t)
+ '(cider-repl-result-prefix ";; => " t)
+ '(cider-repl-wrap-history t t)
  '(company-idle-delay 0.2)
  '(company-minimum-prefix-length 1)
  '(company-tooltip-minimum-width 30)
@@ -19,7 +19,7 @@
  '(cua-read-only-cursor-color "#859900")
  '(custom-safe-themes
    (quote
-    ("88cac3cdd1edc9e90074d8119cc9b14764b5e7e9944d92a582406c9e67bdacdc" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "c7e8605c82b636fc489340e8276a3983745891e18e77440bbae305d1b5af9201" default)))
+    ("71ecffba18621354a1be303687f33b84788e13f40141580fa81e7840752d31bf" "561ba4316ba42fe75bc07a907647caa55fc883749ee4f8f280a29516525fc9e8" "88cac3cdd1edc9e90074d8119cc9b14764b5e7e9944d92a582406c9e67bdacdc" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "c7e8605c82b636fc489340e8276a3983745891e18e77440bbae305d1b5af9201" default)))
  '(dired-use-ls-dired t)
  '(display-battery-mode t)
  '(display-time-24hr-format t)
