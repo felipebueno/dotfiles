@@ -64,3 +64,4 @@
 
 (require 'setup-colors-and-themes)
 ;;; init.el ends here
+(put 'upcase-region 'disabled nil)
