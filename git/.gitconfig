@@ -1,8 +1,0 @@
-[user]
-	name = Felipe Bueno
-	email = bueno.felipe@gmail.com
-[core]
-	editor = emacs
-	autocrlf = input
-[push]
-	default = matching
