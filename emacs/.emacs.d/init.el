@@ -19,22 +19,6 @@
 (require 'setup-defuns)
 (require 'setup-keybindings)
 
-(require 'setup-eshell)
-(require 'setup-org)
-
-(require 'setup-js)
-(require 'setup-clojure)
-
-(require 'setup-helm)
-
-
-
-;; BEGIN lua-mode things (move it to a setup-lua.el file)
-(add-hook 'lua-mode-hook 'smartparens-mode)
-;; END lua-mode
-
-
-
 
 ;; BEGIN move this to a setup-flx-ido.el
 (require 'flx-ido)
@@ -52,16 +36,6 @@
 ;; END move this to a setup-projectile.el
 
 
-
-
-
-
-(require 'setup-scratch-buffer)
-
 (setq custom-file "~/.emacs.d/lisp/custom.el")
 (if (file-exists-p custom-file)
     (load-file custom-file))
-
-(require 'setup-colors-and-themes)
-;;; init.el ends here
-(put 'upcase-region 'disabled nil)

@@ -43,16 +43,7 @@
  '(erc-track-minor-mode t)
  '(erc-track-mode t)
  '(fci-rule-color "#383838")
- '(flycheck-check-syntax-automatically (quote (save idle-change new-line mode-enabled)))
  '(global-linum-mode t)
- '(helm-M-x-fuzzy-match t)
- '(helm-apropos-fuzzy-match t)
- '(helm-buffers-fuzzy-matching t)
- '(helm-imenu-fuzzy-match t)
- '(helm-lisp-fuzzy-completion t)
- '(helm-locate-fuzzy-match t)
- '(helm-recentf-fuzzy-match t)
- '(helm-semantic-fuzzy-match t)
  '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
  '(highlight-symbol-colors
    (--map
@@ -113,23 +104,19 @@
      (320 . "#2793ba")
      (340 . "#268fc6")
      (360 . "#268bd2"))))
- '(vc-annotate-very-old-color nil)
- '(weechat-color-list
-   (quote
-    (unspecified "#002b36" "#073642" "#990A1B" "#dc322f" "#546E00" "#859900" "#7B6000" "#b58900" "#00629D" "#268bd2" "#93115C" "#d33682" "#00736F" "#2aa198" "#839496" "#657b83")))
- '(yas-also-auto-indent-first-line t)
- '(yas-global-mode t nil (yasnippet)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 180 :width normal))))
- '(eval-sexp-fu-flash ((t (:background "brightmagenta" :foreground "white" :weight bold))))
- '(rainbow-delimiters-depth-1-face ((t (:foreground "#ffa500"))))
- '(rainbow-delimiters-depth-7-face ((t (:foreground "Red"))))
- '(rainbow-delimiters-depth-9-face ((t (:foreground "selectedTextBackgroundColor"))))
- '(term ((t (:inherit default :background "#ffffff" :foreground "#000000"))))
- '(term-color-blue ((t (:background "color-39" :foreground "color-39")))))
+ '(vc-annotate-very-old-color nil))
+
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 180 :width normal))))
+;;  '(eval-sexp-fu-flash ((t (:background "brightmagenta" :foreground "white" :weight bold))))
+;;  '(rainbow-delimiters-depth-1-face ((t (:foreground "#ffa500"))))
+;;  '(rainbow-delimiters-depth-7-face ((t (:foreground "Red"))))
+;;  '(rainbow-delimiters-depth-9-face ((t (:foreground "selectedTextBackgroundColor"))))
+;;  '(term ((t (:inherit default :background "#ffffff" :foreground "#000000"))))
+;;  '(term-color-blue ((t (:background "color-39" :foreground "color-39")))))
 
 (provide 'custom)
