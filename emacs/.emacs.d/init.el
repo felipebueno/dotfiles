@@ -33,8 +33,18 @@
 ;; BEGIN move this to a setup-projectile.el
 (projectile-global-mode)
 (setq projectile-enable-caching t)
+
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 ;; END move this to a setup-projectile.el
 
+
+;; BEGIN smex
+(require 'smex) ; Not needed if you use package.el
+(smex-initialize) ; Can be omitted. This might cause a (minimal) delay
+                  ; when Smex is auto-initialized on its first run.
+;; END smex
 
 (setq custom-file "~/.emacs.d/lisp/custom.el")
 (if (file-exists-p custom-file)

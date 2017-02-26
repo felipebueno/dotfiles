@@ -8,9 +8,6 @@
 
 (global-set-key (kbd "C-a") 'smart-beginning-of-line)
 
-(global-set-key (kbd "M-x") 'smex-major-mode-commands)
-(global-set-key (kbd "C-x C-m") 'smex)
-
 
 ;; Expand region (increases selected region by semantic units)
 (global-set-key (kbd "C-'") 'er/expand-region)

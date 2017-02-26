@@ -1,10 +1,13 @@
 (require 'package)
 
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+;;(add-to-list 'package-archives
+;;             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 ;;(add-to-list 'package-archives
 ;;             '("melpa" . "https://melpa.org/packages/"))
+
+(add-to-list 'package-archives
+             '("marmalade" . "https://marmalade-repo.org/packages/"))
 
 (package-initialize)
 (when (not package-archive-contents)
@@ -13,15 +16,16 @@
 (defvar my-packages '(
                       better-defaults
                       company
-		      flx-ido
+                      elisp-slime-nav
+                      flx-ido
                       ido-ubiquitous
-		      idle-highlight-mode 
+                      idle-highlight-mode
                       lua-mode
                       ;; magit ;; only for emacs 24.4 :(
                       multiple-cursors
-		      paredit
+                      paredit
                       projectile
-    		      scpaste
+                      scpaste
                       smex
                       undo-tree
                       ))
