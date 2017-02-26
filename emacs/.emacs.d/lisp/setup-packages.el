@@ -19,6 +19,7 @@
                       elisp-slime-nav
                       flx-ido
                       ido-ubiquitous
+                      ido-yes-or-no
                       idle-highlight-mode
                       lua-mode
                       ;; magit ;; only for emacs 24.4 :(

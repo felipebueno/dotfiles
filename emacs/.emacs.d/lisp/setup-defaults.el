@@ -1,5 +1,8 @@
 (setq source-directory "~/devel/src/emacs")
 
+;; http://stackoverflow.com/questions/17019099/emacs-getting-pgdn-to-end-of-buffer
+(setq scroll-error-top-bottom t)
+
 ;; Enable mouse actions on terminal - https://bitheap.org/mouseterm/
 (unless window-system
   (xterm-mouse-mode 1)

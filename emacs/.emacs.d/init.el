@@ -14,7 +14,6 @@
 
 (require 'setup-packages)
 (require 'setup-defaults)
-(require 'setup-hooks)
 
 (require 'setup-defuns)
 (require 'setup-keybindings)
@@ -27,6 +26,12 @@
 (flx-ido-mode 1)
 (setq ido-enable-flex-matching t) ;; disable ido faces to see flx highlights.
 (setq ido-use-faces nil)
+
+(require 'ido-ubiquitous)
+(ido-ubiquitous-mode 1)
+
+(require 'ido-yes-or-no)
+(ido-yes-or-no-mode 1)
 ;; END move this to a setup-flx-ido.el
 
 
@@ -43,9 +48,43 @@
 ;; BEGIN smex
 (require 'smex) ; Not needed if you use package.el
 (smex-initialize) ; Can be omitted. This might cause a (minimal) delay
-                  ; when Smex is auto-initialized on its first run.
+                                        ; when Smex is auto-initialized on its first run.
 ;; END smex
+
+;; START elisp-slime-nav
+(dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
+  (add-hook hook 'turn-on-elisp-slime-nav-mode))
+;; END
+
 
 (setq custom-file "~/.emacs.d/lisp/custom.el")
 (if (file-exists-p custom-file)
     (load-file custom-file))
+
+
+
+
+
+;; START hooks (require 'setup-hooks)
+(add-hook 'after-init-hook 'global-undo-tree-mode)
+(add-hook 'after-init-hook 'global-company-mode)
+
+
+(autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
+(add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
+(add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
+(add-hook 'ielm-mode-hook             #'enable-paredit-mode)
+(add-hook 'lisp-mode-hook             #'enable-paredit-mode)
+(add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
+(add-hook 'scheme-mode-hook           #'enable-paredit-mode)
+
+
+(defun my-coding-hook ()
+  (make-local-variable 'column-number-mode)
+  (column-number-mode t)
+  (if window-system (hl-line-mode t))
+  (idle-highlight-mode t))
+(add-hook 'emacs-lisp-mode-hook 'my-coding-hook)
+(add-hook 'csharp-mode-hook 'my-coding-hook)
+
+;; END hooks
