@@ -23,6 +23,10 @@
                       scpaste
                       smex
                       undo-tree
+                      rainbow-delimiters
+                      highlight-parentheses
+                      cyberpunk-theme
+                      ample-theme
                       ))
 
 (dolist (p my-packages)

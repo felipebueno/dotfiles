@@ -14,7 +14,6 @@
 
 (require 'setup-packages)
 (require 'setup-defaults)
-
 (require 'setup-defuns)
 (require 'setup-keybindings)
 
@@ -26,8 +25,6 @@
 (flx-ido-mode 1)
 (setq ido-enable-flex-matching t) ;; disable ido faces to see flx highlights.
 (setq ido-use-faces nil)
-
-;;(require 'ido-ubiquitous)
 (ido-ubiquitous-mode 1)
 
 (require 'ido-yes-or-no)
@@ -68,7 +65,7 @@
 ;; START hooks (require 'setup-hooks)
 (add-hook 'after-init-hook 'global-undo-tree-mode)
 (add-hook 'after-init-hook 'global-company-mode)
-
+(add-hook 'after-init-hook (lambda () (load-theme 'ample t)))
 
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
 (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
@@ -78,13 +75,17 @@
 (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
 (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
 
+(add-hook 'emacs-lisp-mode-hook       #'rainbow-delimiters-mode)
+(add-hook 'emacs-lisp-mode-hook       #'highlight-parentheses-mode)
 
 (defun my-coding-hook ()
   (make-local-variable 'column-number-mode)
   (column-number-mode t)
   (if window-system (hl-line-mode t))
   (idle-highlight-mode t))
+
 (add-hook 'emacs-lisp-mode-hook 'my-coding-hook)
+
 (add-hook 'csharp-mode-hook 'my-coding-hook)
 
 ;; END hooks
