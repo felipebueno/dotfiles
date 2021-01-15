@@ -27,7 +27,7 @@
 (setq ido-enable-flex-matching t) ;; disable ido faces to see flx highlights.
 (setq ido-use-faces nil)
 
-(require 'ido-ubiquitous)
+;;(require 'ido-ubiquitous)
 (ido-ubiquitous-mode 1)
 
 (require 'ido-yes-or-no)

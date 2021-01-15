@@ -1,15 +1,10 @@
 (require 'package)
 
-;;(add-to-list 'package-archives
-;;             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-
-;;(add-to-list 'package-archives
-;;             '("melpa" . "https://melpa.org/packages/"))
-
 (add-to-list 'package-archives
-             '("marmalade" . "https://marmalade-repo.org/packages/"))
+             '("melpa" . "https://melpa.org/packages/"))
 
 (package-initialize)
+
 (when (not package-archive-contents)
   (package-refresh-contents))
 
@@ -18,11 +13,10 @@
                       company
                       elisp-slime-nav
                       flx-ido
-                      ido-ubiquitous
                       ido-yes-or-no
                       idle-highlight-mode
                       lua-mode
-                      ;; magit ;; only for emacs 24.4 :(
+                      magit
                       multiple-cursors
                       paredit
                       projectile
