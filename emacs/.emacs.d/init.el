@@ -65,7 +65,7 @@
 ;; START hooks (require 'setup-hooks)
 (add-hook 'after-init-hook 'global-undo-tree-mode)
 (add-hook 'after-init-hook 'global-company-mode)
-(add-hook 'after-init-hook (lambda () (load-theme 'ample t)))
+(add-hook 'after-init-hook (lambda () (load-theme 'material-light t)))
 
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
 (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
@@ -75,17 +75,22 @@
 (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
 (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
 
-(add-hook 'emacs-lisp-mode-hook       #'rainbow-delimiters-mode)
-(add-hook 'emacs-lisp-mode-hook       #'highlight-parentheses-mode)
+;;(add-hook 'emacs-lisp-mode-hook       #'rainbow-delimiters-mode)
 
 (defun my-coding-hook ()
   (make-local-variable 'column-number-mode)
   (column-number-mode t)
+  (highlight-parentheses-mode t)
   (if window-system (hl-line-mode t))
   (idle-highlight-mode t))
 
 (add-hook 'emacs-lisp-mode-hook 'my-coding-hook)
 
-(add-hook 'csharp-mode-hook 'my-coding-hook)
+;; START Python config
+(add-hook 'python-mode-hook 'my-coding-hook)
+(add-hook 'python-mode-hook 'elpy-enable)
+;; END Python config
+
+(setq find-function-C-source-directory "~/devel/tools/emacs-27.1/src")
 
 ;; END hooks

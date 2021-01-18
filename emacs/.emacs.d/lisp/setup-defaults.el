@@ -1,6 +1,7 @@
 (setq source-directory "~/devel/src/emacs")
 
 (tool-bar-mode -1)
+(scroll-bar-mode -1)
 
 ;; http://stackoverflow.com/questions/17019099/emacs-getting-pgdn-to-end-of-buffer
 (setq scroll-error-top-bottom t)
@@ -71,5 +72,7 @@
 
 (when (fboundp 'winner-mode)
   (winner-mode 1))
+
+(pending-delete-mode t)
 
 (provide 'setup-defaults)

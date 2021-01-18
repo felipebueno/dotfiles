@@ -69,9 +69,10 @@
  '(magit-diff-use-overlays nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(highlight-parentheses highlight-paren highlight-paren-mode ample-theme rainbow-delimiters cyberpunk-theme undo-tree smex scpaste projectile paredit multiple-cursors magit lua-mode ido-yes-or-no idle-highlight-mode flx-ido elisp-slime-nav company better-defaults))
+   '(expand-region elpy material-theme highlight-parentheses highlight-paren highlight-paren-mode ample-theme rainbow-delimiters cyberpunk-theme undo-tree smex scpaste projectile paredit multiple-cursors magit lua-mode ido-yes-or-no idle-highlight-mode flx-ido elisp-slime-nav company better-defaults))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
+ '(python-shell-interpreter "python3")
  '(scroll-conservatively 101)
  '(send-mail-function 'mailclient-send-it)
  '(show-trailing-whitespace t)

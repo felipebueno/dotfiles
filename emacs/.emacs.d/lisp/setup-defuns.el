@@ -40,7 +40,9 @@
 (defun save-region-or-current-line (arg)
   (interactive "P")
   (if (region-active-p)
-      (kill-ring-save (region-beginning) (region-end))
+      (progn
+        (kill-ring-save (region-beginning) (region-end))
+        (message "Text copied"))
     (copy-whole-lines 1)))
 
 (defun kill-region-or-current-line (arg)
@@ -68,5 +70,26 @@ If point was already at that position, move point to beginning of line."
   (open-line 1)
   (next-line 1)
   (yank))
+
+;; Behave like vi's o command
+(defun open-next-line (arg)
+  "Move to the next line and then opens a line.
+    See also `newline-and-indent'."
+  (interactive "p")
+  (end-of-line)
+  (open-line arg)
+  (forward-line 1)
+  (when newline-and-indent
+    (indent-according-to-mode)))
+
+;; Behave like vi's O command
+(defun open-previous-line (arg)
+  "Open a new line before the current one.
+     See also `newline-and-indent'."
+  (interactive "p")
+  (beginning-of-line)
+  (open-line arg)
+  (when newline-and-indent
+    (indent-according-to-mode)))
 
 (provide 'setup-defuns)

@@ -10,6 +10,7 @@
 
 (defvar my-packages '(
                       better-defaults
+                      expand-region
                       company
                       elisp-slime-nav
                       flx-ido
@@ -26,7 +27,12 @@
                       rainbow-delimiters
                       highlight-parentheses
                       cyberpunk-theme
+                      material-theme
                       ample-theme
+                      ;; START python stuff
+                      elpy ;; Emacs Lisp Python Environment
+
+                      ;; END python stuff
                       ))
 
 (dolist (p my-packages)

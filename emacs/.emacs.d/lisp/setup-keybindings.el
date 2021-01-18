@@ -9,10 +9,6 @@
 (global-set-key (kbd "C-a") 'smart-beginning-of-line)
 
 
-;; Expand region (increases selected region by semantic units)
-(global-set-key (kbd "C-'") 'er/expand-region)
-
-
 ;; Edit init.el
 (global-set-key (kbd "<f5>")
                 (lambda ()
@@ -45,9 +41,11 @@
 
 ;; Use M-w for copy-line if no active region
 (global-set-key (kbd "M-w") 'save-region-or-current-line)
-(global-set-key (kbd "C-w") 'kill-region-or-current-line)
+;;(global-set-key (kbd "C-w") 'kill-region-or-current-line)
 (global-set-key (kbd "C-S-d") 'duplicate-line)
 
+(global-set-key (kbd "C-w") 'er/expand-region)
+(global-set-key (kbd "C-M-w") 'er/contract-region)
 
 (global-set-key (kbd "ESC <right>") 'paredit-forward-slurp-sexp)
 (global-set-key (kbd "ESC <left>") 'paredit-forward-barf-sexp)
@@ -67,5 +65,14 @@
 
 ;;(global-unset-key (kbd "C-x C-o"))
 (global-set-key (kbd "C-x C-o") 'projectile-find-file)
+
+(global-set-key (kbd "C-o") 'open-next-line)
+(global-set-key (kbd "M-o") 'open-previous-line)
+(global-set-key [C-S-return]   'open-next-line)
+(global-set-key [S-return] 'open-previous-line)
+
+;; Autoindent open-*-lines
+(defvar newline-and-indent t
+  "Modify the behavior of the open-*-line functions to cause them to autoindent.")
 
 (provide 'setup-keybindings)
