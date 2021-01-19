@@ -3,6 +3,9 @@ cider-history
 ido.last
 recentf
 emacs/.emacs.d/tmp/
+emacs/.emacs.d/.extension
+emacs/.emacs.d/.lsp-session*
+
 
 # Leiningen stuff
 repl-port

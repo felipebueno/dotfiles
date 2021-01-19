@@ -65,7 +65,7 @@
 ;; START hooks (require 'setup-hooks)
 (add-hook 'after-init-hook 'global-undo-tree-mode)
 (add-hook 'after-init-hook 'global-company-mode)
-(add-hook 'after-init-hook (lambda () (load-theme 'material-light t)))
+(add-hook 'after-init-hook (lambda () (load-theme 'material t)))
 
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
 (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
