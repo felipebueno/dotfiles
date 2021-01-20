@@ -5,6 +5,7 @@ recentf
 emacs/.emacs.d/tmp/
 emacs/.emacs.d/.extension
 emacs/.emacs.d/.lsp-session*
+emacs/.emacs.d/.dap-breakpoints
 
 
 # Leiningen stuff
