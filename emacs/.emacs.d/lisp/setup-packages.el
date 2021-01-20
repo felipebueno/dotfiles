@@ -51,8 +51,22 @@
     (package-install p)))
 
 ;; LSP stuff
-(use-package lsp-mode :ensure t)
+(use-package lsp-mode
+  :ensure t
+  :defer t
+  :hook (lsp-mode . (lambda ()
+                      (let ((lsp-keymap-prefix "C-c l"))
+                        (lsp-enable-which-key-integration))))
+  :init
+  (setq lsp-keep-workspace-alive nil
+        lsp-signature-doc-lines 5
+        lsp-idle-delay 0.5
+        lsp-prefer-capf t
+        lsp-client-packages nil)
+  :config
+  (define-key lsp-mode-map (kbd "C-c l") lsp-command-map))
 (use-package lsp-ui :ensure t) ;; UI for LSP
+
 
 (use-package projectile :ensure t) ;; project management
 (use-package yasnippet

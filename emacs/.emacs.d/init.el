@@ -35,6 +35,8 @@
 ;; BEGIN move this to a setup-projectile.el
 (projectile-global-mode)
 (setq projectile-enable-caching t)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
