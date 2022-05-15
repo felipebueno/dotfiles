@@ -92,3 +92,11 @@
 (load (expand-file-name "~/.quicklisp/slime-helper.el"))
 (setq inferior-lisp-program "sbcl")
 ;; END SETUP slime
+
+;; START SETUP helm
+(helm-mode 1)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+
+;; END SETUP helm
