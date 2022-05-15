@@ -19,16 +19,16 @@
 
 
 ;; BEGIN move this to a setup-flx-ido.el
-(require 'flx-ido)
-(ido-mode 1)
-(ido-everywhere 1)
-(flx-ido-mode 1)
-(setq ido-enable-flex-matching t) ;; disable ido faces to see flx highlights.
-(setq ido-use-faces nil)
-(ido-ubiquitous-mode 1)
+;; (require 'flx-ido)
+;; (ido-mode 1)
+;; (ido-everywhere 1)
+;; (flx-ido-mode 1)
+;; (setq ido-enable-flex-matching t) ;; disable ido faces to see flx highlights.
+;; (setq ido-use-faces nil)
+;; (ido-ubiquitous-mode 1)
 
-(require 'ido-yes-or-no)
-(ido-yes-or-no-mode 1)
+;; (require 'ido-yes-or-no)
+;; (ido-yes-or-no-mode 1)
 ;; END move this to a setup-flx-ido.el
 
 
@@ -38,16 +38,15 @@
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+;; (global-set-key (kbd "M-x") 'smex)
+;; (global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 ;; END move this to a setup-projectile.el
 
 
 ;; BEGIN smex
-(require 'smex) ; Not needed if you use package.el
-(smex-initialize) ; Can be omitted. This might cause a (minimal) delay
-                                        ; when Smex is auto-initialized on its first run.
+;; (require 'smex) ; Not needed if you use package.el
+;; (smex-initialize) ; Can be omitted. This might cause a (minimal) delay when Smex is auto-initialized on its first run.
 ;; END smex
 
 ;; START elisp-slime-nav
@@ -61,13 +60,10 @@
     (load-file custom-file))
 
 
-
-
-
 ;; START hooks (require 'setup-hooks)
 (add-hook 'after-init-hook 'global-undo-tree-mode)
 (add-hook 'after-init-hook 'global-company-mode)
-(add-hook 'after-init-hook (lambda () (load-theme 'material t)))
+;;(add-hook 'after-init-hook (lambda () (load-theme 'material t)))
 
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
 (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
@@ -88,11 +84,11 @@
 
 (add-hook 'emacs-lisp-mode-hook 'my-coding-hook)
 
-;; START Python config
-(add-hook 'python-mode-hook 'my-coding-hook)
-(add-hook 'python-mode-hook 'elpy-enable)
-;; END Python config
-
-(setq find-function-C-source-directory "~/devel/tools/emacs-27.1/src")
+;; (setq find-function-C-source-directory "~/devel/tools/emacs-27.1/src")
 
 ;; END hooks
+
+;; START SETUP slime
+(load (expand-file-name "~/.quicklisp/slime-helper.el"))
+(setq inferior-lisp-program "sbcl")
+;; END SETUP slime

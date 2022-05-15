@@ -22,28 +22,17 @@
                       better-defaults
                       expand-region
                       elisp-slime-nav
-                      flx-ido
-                      ido-yes-or-no
                       idle-highlight-mode
-                      lua-mode
                       magit
                       multiple-cursors
                       paredit
                       scpaste
-                      smex
                       undo-tree
                       rainbow-delimiters
                       highlight-parentheses
-                      cyberpunk-theme
-                      material-theme
-                      ample-theme
-                      ;; START python stuff
-                      elpy ;; Emacs Lisp Python Environment
-                      ;; END python stuff
-                      ;; START php stuff
-                      php-mode
                       web-mode
-                      ;; END php stuff
+                      helm
+                      sly
                       ))
 
 (dolist (p my-packages)
@@ -65,7 +54,7 @@
         lsp-client-packages nil)
   :config
   (define-key lsp-mode-map (kbd "C-c l") lsp-command-map))
-(use-package lsp-ui :ensure t) ;; UI for LSP
+;; (use-package lsp-ui :ensure t) ;; UI for LSP
 
 
 (use-package projectile :ensure t) ;; project management
