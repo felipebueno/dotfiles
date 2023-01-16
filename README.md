@@ -4,15 +4,11 @@ dotfiles
 Keeping all my dotfiles files in one place
 
 ```
-brew install stow
+Install stow
 
-cd $HOME
+git clone https://github.com/felipebueno/dotfiles.git ~/
 
-git https://github.com/felipebueno/dotfiles.git
+cd ~/dotfiles
 
-cd dotfiles
-
-stow bash
-stow zsh
 stow emacs
 ```
