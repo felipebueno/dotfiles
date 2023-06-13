@@ -69,7 +69,7 @@
  '(magit-diff-use-overlays nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(sly helm expand-region elpy material-theme highlight-parentheses highlight-paren highlight-paren-mode ample-theme rainbow-delimiters cyberpunk-theme undo-tree smex scpaste projectile paredit multiple-cursors magit lua-mode ido-yes-or-no idle-highlight-mode flx-ido elisp-slime-nav company better-defaults))
+   '(eglot lsp-go gopls helm-projectile sly helm expand-region elpy material-theme highlight-parentheses highlight-paren highlight-paren-mode ample-theme rainbow-delimiters cyberpunk-theme undo-tree smex scpaste projectile paredit multiple-cursors magit lua-mode ido-yes-or-no idle-highlight-mode flx-ido elisp-slime-nav company better-defaults))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(python-shell-interpreter "python3")

@@ -1,22 +1,7 @@
-;; (require 'package)
+(require 'package)
 
-;; (add-to-list 'package-archives
-;;              '("melpa" . "https://melpa.org/packages/"))
-
-;; (package-initialize)
-
-;; (when (not package-archive-contents)
-;;   (package-refresh-contents))
-
-(condition-case nil
-    (require 'use-package)
-  (file-error
-   (require 'package)
-   (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-   (package-initialize)
-   (package-refresh-contents)
-   (package-install 'use-package)
-   (require 'use-package)))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
 
 (defvar my-packages '(
                       better-defaults
@@ -33,11 +18,13 @@
                       web-mode
                       helm
                       sly
+                      eglot
+                      go-mode
                       ))
 
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
+(when (cl-find-if-not #'package-installed-p my-packages)
+  (package-refresh-contents)
+  (mapc #'package-install my-packages))
 
 ;; LSP stuff
 (use-package lsp-mode
@@ -68,5 +55,11 @@
 (use-package lsp-dart
   :ensure t
   :hook (dart-mode . lsp))
+
+;; C & C++ stuff
+(add-hook 'c-mode-hook 'lsp)
+(add-hook 'c++-mode-hook 'lsp)
+
+
 
 (provide 'setup-packages)

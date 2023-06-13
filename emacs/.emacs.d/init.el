@@ -17,42 +17,12 @@
 (require 'setup-defuns)
 (require 'setup-keybindings)
 
-
-;; BEGIN move this to a setup-flx-ido.el
-;; (require 'flx-ido)
-;; (ido-mode 1)
-;; (ido-everywhere 1)
-;; (flx-ido-mode 1)
-;; (setq ido-enable-flex-matching t) ;; disable ido faces to see flx highlights.
-;; (setq ido-use-faces nil)
-;; (ido-ubiquitous-mode 1)
-
-;; (require 'ido-yes-or-no)
-;; (ido-yes-or-no-mode 1)
-;; END move this to a setup-flx-ido.el
-
-
 ;; BEGIN move this to a setup-projectile.el
 (projectile-global-mode)
 (setq projectile-enable-caching t)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-
-;; (global-set-key (kbd "M-x") 'smex)
-;; (global-set-key (kbd "M-X") 'smex-major-mode-commands)
-;; (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 ;; END move this to a setup-projectile.el
-
-
-;; BEGIN smex
-;; (require 'smex) ; Not needed if you use package.el
-;; (smex-initialize) ; Can be omitted. This might cause a (minimal) delay when Smex is auto-initialized on its first run.
-;; END smex
-
-;; START elisp-slime-nav
-(dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
-  (add-hook hook 'turn-on-elisp-slime-nav-mode))
-;; END
 
 
 (setq custom-file "~/.emacs.d/lisp/custom.el")
@@ -88,15 +58,9 @@
 
 ;; END hooks
 
-;; START SETUP slime
-(load (expand-file-name "~/.quicklisp/slime-helper.el"))
-(setq inferior-lisp-program "sbcl")
-;; END SETUP slime
-
 ;; START SETUP helm
 (helm-mode 1)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
-
 ;; END SETUP helm
