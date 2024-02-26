@@ -18,10 +18,11 @@
 
 ;; https://github.com/magnars/multiple-cursors.el
 ;; From active region to multiple cursors:
+(global-unset-key (kbd "M-j"))
+(global-set-key (kbd "M-j") 'mc/mark-next-like-this)
 (global-set-key (kbd "<f6>") 'mc/mark-next-like-this)
 (global-set-key (kbd "<f7>") 'mc/mark-previous-like-this)
 (global-set-key (kbd "<f8>") 'mc/mark-all-like-this)
-
 
 ;; Toggle fullscreen
 (global-set-key [f11] 'toggle-frame-fullscreen)
@@ -47,8 +48,8 @@
 (global-set-key (kbd "C-w") 'er/expand-region)
 (global-set-key (kbd "C-M-w") 'er/contract-region)
 
-(global-set-key (kbd "ESC <right>") 'paredit-forward-slurp-sexp)
-(global-set-key (kbd "ESC <left>") 'paredit-forward-barf-sexp)
+;; (global-set-key (kbd "ESC <right>") 'paredit-forward-slurp-sexp)
+;; (global-set-key (kbd "ESC <left>") 'paredit-forward-barf-sexp)
 
 (global-unset-key (kbd "<left>"))
 (global-unset-key (kbd "<right>"))
@@ -71,8 +72,20 @@
 (global-set-key [C-S-return]   'open-next-line)
 (global-set-key [S-return] 'open-previous-line)
 
+;; buffer keybindings
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
+
 ;; Autoindent open-*-lines
 (defvar newline-and-indent t
   "Modify the behavior of the open-*-line functions to cause them to autoindent.")
+
+;; S (shift) key doesn't work on terminal only mode (emacs -nw or tty)
+(global-unset-key (kbd "C-_"))
+(global-set-key (kbd "M-u") 'undo-tree-undo)
+
+(eval-after-load "paredit"
+  '(progn
+    (define-key paredit-mode-map (kbd "C-M-u") nil)))
+(global-set-key (kbd "C-M-u") 'undo-tree-redo)
 
 (provide 'setup-keybindings)

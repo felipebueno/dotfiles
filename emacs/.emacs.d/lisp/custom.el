@@ -43,36 +43,26 @@
  '(erc-track-mode t)
  '(fci-rule-color "#383838")
  '(global-linum-mode t)
- '(highlight-changes-colors '("#d33682" "#6c71c4"))
- '(highlight-symbol-colors
-   (--map
-    (solarized-color-blend it "#002b36" 0.25)
-    '("#b58900" "#2aa198" "#dc322f" "#6c71c4" "#859900" "#cb4b16" "#268bd2")))
- '(highlight-symbol-foreground-color "#93a1a1")
- '(highlight-tail-colors
-   '(("#073642" . 0)
-     ("#546E00" . 20)
-     ("#00736F" . 30)
-     ("#00629D" . 50)
-     ("#7B6000" . 60)
-     ("#8B2C02" . 70)
-     ("#93115C" . 85)
-     ("#073642" . 100)))
  '(hl-bg-colors
    '("#7B6000" "#8B2C02" "#990A1B" "#93115C" "#3F4D91" "#00629D" "#00736F" "#546E00"))
  '(hl-fg-colors
    '("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36"))
  '(idle-highlight-idle-time 0.1)
  '(inhibit-startup-screen t)
+ '(ispell-dictionary nil)
  '(line-number-mode nil)
  '(lua-indent-level 2)
  '(magit-diff-use-overlays nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(eglot lsp-go gopls helm-projectile sly helm expand-region elpy material-theme highlight-parentheses highlight-paren highlight-paren-mode ample-theme rainbow-delimiters cyberpunk-theme undo-tree smex scpaste projectile paredit multiple-cursors magit lua-mode ido-yes-or-no idle-highlight-mode flx-ido elisp-slime-nav company better-defaults))
+   '(rg helm-xref which-key avy hydra yasnippet zig-mode omnisharp exec-path-from-shell hover flycheck dart-mode dap-dlv-go dap-go go-mode web-mode use-package eglot lsp-go gopls helm-projectile helm expand-region elpy material-theme highlight-parentheses highlight-paren highlight-paren-mode ample-theme rainbow-delimiters undo-tree smex scpaste projectile paredit multiple-cursors magit lua-mode ido-yes-or-no idle-highlight-mode flx-ido company better-defaults))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(python-shell-interpreter "python3")
+ '(safe-local-variable-values
+   '((vc-prepare-patches-separately)
+     (diff-add-log-use-relative-names . t)
+     (vc-git-annotate-switches . "-w")))
  '(scroll-conservatively 101)
  '(send-mail-function 'mailclient-send-it)
  '(show-trailing-whitespace t)
@@ -117,10 +107,11 @@
 ;;  '(term ((t (:inherit default :background "#ffffff" :foreground "#000000"))))
 ;;  '(term-color-blue ((t (:background "color-39" :foreground "color-39")))))
 
-(provide 'custom)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(idle-highlight ((t (:background "yellow" :weight bold)))))
+ '(idle-highlight ((t (:background "red" :weight bold)))))
+
+(provide 'custom)

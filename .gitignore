@@ -7,7 +7,6 @@ emacs/.emacs.d/.extension
 emacs/.emacs.d/.lsp-session*
 emacs/.emacs.d/.dap-breakpoints
 
-
 # Leiningen stuff
 repl-port
 self-installs/
@@ -18,3 +17,5 @@ self-installs/
 /emacs/.emacs.d/network-security.data
 /emacs/.emacs.d/smex-items
 /emacs/.emacs.d/transient/
+emacs/.emacs.d/projects
+emacs/.emacs.d/quelpa/cache

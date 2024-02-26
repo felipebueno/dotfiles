@@ -1,48 +1,48 @@
 (require 'package)
 
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+
 (package-initialize)
 
-(defvar my-packages '(
-                      better-defaults
-                      expand-region
-                      elisp-slime-nav
-                      idle-highlight-mode
-                      magit
-                      multiple-cursors
-                      paredit
-                      scpaste
-                      undo-tree
-                      rainbow-delimiters
-                      highlight-parentheses
-                      web-mode
-                      helm
-                      sly
-                      eglot
-                      go-mode
-                      ))
+(defvar my-packages
+  '(
+		use-package
+    better-defaults
+    expand-region
+    idle-highlight-mode
+    magit
+    multiple-cursors
+    paredit
+    undo-tree
+    rainbow-delimiters
+    highlight-parentheses
+    web-mode
+    helm
+    go-mode
+    eglot
+    avy ;; TODO Aprender a usar
+    which-key ;; TODO Aprender a usar direito
+    helm-xref
+    flycheck
+    yasnippet
+    zig-mode
+    rg ;; ripgrep https://github.com/dajva/rg.el
+    )
+  )
 
 (when (cl-find-if-not #'package-installed-p my-packages)
   (package-refresh-contents)
   (mapc #'package-install my-packages))
 
-;; LSP stuff
-(use-package lsp-mode
-  :ensure t
-  :defer t
-  :hook (lsp-mode . (lambda ()
-                      (let ((lsp-keymap-prefix "C-c l"))
-                        (lsp-enable-which-key-integration))))
-  :init
-  (setq lsp-keep-workspace-alive nil
-        lsp-signature-doc-lines 5
-        lsp-idle-delay 0.5
-        lsp-prefer-capf t
-        lsp-client-packages nil)
-  :config
-  (define-key lsp-mode-map (kbd "C-c l") lsp-command-map))
-;; (use-package lsp-ui :ensure t) ;; UI for LSP
+;; TODO Move config below to the correct place
+;; sample `helm' configuration use https://github.com/emacs-helm/helm/ for details
+(helm-mode)
+(require 'helm-xref)
+(define-key global-map [remap find-file] #'helm-find-files)
+(define-key global-map [remap execute-extended-command] #'helm-M-x)
+(define-key global-map [remap switch-to-buffer] #'helm-mini)
 
+(which-key-mode)
 
 (use-package projectile :ensure t) ;; project management
 (use-package yasnippet
@@ -51,15 +51,6 @@
 
 (use-package company :ensure t) ;; Auto-complete
 
-;; Dart stuff
-(use-package lsp-dart
-  :ensure t
-  :hook (dart-mode . lsp))
-
-;; C & C++ stuff
-(add-hook 'c-mode-hook 'lsp)
-(add-hook 'c++-mode-hook 'lsp)
-
-
+(use-package dap-mode :ensure t)
 
 (provide 'setup-packages)

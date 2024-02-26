@@ -6,11 +6,16 @@
 (setq user-mail-address "bueno.felipe@gmail.com")
 
 (setq temporary-file-directory "~/.emacs.d/tmp")
+(setq find-function-C-source-directory "~/devel/tools/emacs/src")
 
 ;; Set path to dependencies
 (setq lisp-dir
       (expand-file-name "lisp" user-emacs-directory))
 (add-to-list 'load-path lisp-dir)
+
+(setq custom-file "~/.emacs.d/lisp/custom.el")
+(if (file-exists-p custom-file)
+    (load-file custom-file))
 
 (require 'setup-packages)
 (require 'setup-defaults)
@@ -20,20 +25,12 @@
 ;; BEGIN move this to a setup-projectile.el
 (projectile-global-mode)
 (setq projectile-enable-caching t)
-(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 ;; END move this to a setup-projectile.el
-
-
-(setq custom-file "~/.emacs.d/lisp/custom.el")
-(if (file-exists-p custom-file)
-    (load-file custom-file))
-
 
 ;; START hooks (require 'setup-hooks)
 (add-hook 'after-init-hook 'global-undo-tree-mode)
 (add-hook 'after-init-hook 'global-company-mode)
-;;(add-hook 'after-init-hook (lambda () (load-theme 'material t)))
 
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
 (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
@@ -43,7 +40,7 @@
 (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
 (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
 
-;;(add-hook 'emacs-lisp-mode-hook       #'rainbow-delimiters-mode)
+(add-hook 'emacs-lisp-mode-hook       #'rainbow-delimiters-mode)
 
 (defun my-coding-hook ()
   (make-local-variable 'column-number-mode)
@@ -51,11 +48,7 @@
   (highlight-parentheses-mode t)
   (if window-system (hl-line-mode t))
   (idle-highlight-mode t))
-
 (add-hook 'emacs-lisp-mode-hook 'my-coding-hook)
-
-;; (setq find-function-C-source-directory "~/devel/tools/emacs-27.1/src")
-
 ;; END hooks
 
 ;; START SETUP helm
@@ -64,3 +57,30 @@
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
 ;; END SETUP helm
+
+;; (add-hook 'after-init-hook (lambda () (load-theme 'tango-dark t)))
+(add-hook 'after-init-hook (lambda () (load-theme 'wheatgrass t)))
+
+;; BEGIN Setup Odin
+(add-to-list 'load-path "/home/felipe/.emacs.d/elpaca/repos/odin-mode")
+(add-to-list 'load-path "/home/felipe/devel/tools/langs/ols")
+
+(require 'odin-mode)
+
+(use-package eglot
+  :ensure t
+  :config
+  (add-to-list 'eglot-server-programs '(odin-mode . ("ols")))
+  :hook
+  ((odin-mode . eglot-ensure)))
+;; END Setup Odin
+
+;; BEGIN Setup zig
+(use-package eglot
+	:hook
+	(zig-mode . eglot-ensure)
+	:config
+	(setq eglot-autoshutdown t)
+	(add-to-list 'eglot-server-programs '(zig-mode . ("zls")))) ;; make sure zls is installed 
+;; END Setup zig
+
