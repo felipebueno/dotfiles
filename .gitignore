@@ -2,15 +2,18 @@
 cider-history
 ido.last
 recentf
-emacs/.emacs.d/tmp/
-emacs/.emacs.d/.extension
-emacs/.emacs.d/.lsp-session*
-emacs/.emacs.d/.dap-breakpoints
 
 # Leiningen stuff
 repl-port
 self-installs/
 /lein/.lein/repl-history
+
+*\~
+*.~
+emacs/.emacs.d/tmp/
+emacs/.emacs.d/.extension
+emacs/.emacs.d/.lsp-session*
+emacs/.emacs.d/.dap-breakpoints
 /emacs/.emacs.d/company-statistics-cache.el
 /emacs/.emacs.d/projectile-bookmarks.eld
 /emacs/.emacs.d/projectile.cache

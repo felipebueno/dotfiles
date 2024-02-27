@@ -88,4 +88,10 @@
     (define-key paredit-mode-map (kbd "C-M-u") nil)))
 (global-set-key (kbd "C-M-u") 'undo-tree-redo)
 
+;; BEGIN eglot keybindings
+(global-unset-key (kbd "C-S-i"))
+(global-set-key (kbd "C-S-i") 'eglot-format-buffer)
+(global-set-key (kbd "M-RET") 'eglot-code-actions)
+;; END eglot keybindings
+
 (provide 'setup-keybindings)
