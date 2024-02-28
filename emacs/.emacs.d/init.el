@@ -60,6 +60,7 @@
 
 ;; (add-hook 'after-init-hook (lambda () (load-theme 'tango-dark t)))
 (add-hook 'after-init-hook (lambda () (load-theme 'wheatgrass t)))
+;; (add-hook 'after-init-hook (lambda () (load-theme 'tango-dark t)))
 
 ;; BEGIN Setup Odin
 (add-to-list 'load-path "/home/felipe/.emacs.d/elpaca/repos/odin-mode")
