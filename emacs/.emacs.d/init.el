@@ -59,8 +59,6 @@
 ;; END SETUP helm
 
 ;; (add-hook 'after-init-hook (lambda () (load-theme 'tango-dark t)))
-(add-hook 'after-init-hook (lambda () (load-theme 'wheatgrass t)))
-;; (add-hook 'after-init-hook (lambda () (load-theme 'tango-dark t)))
 
 ;; BEGIN Setup Odin
 (add-to-list 'load-path "/home/felipe/.emacs.d/elpaca/repos/odin-mode")
@@ -84,4 +82,3 @@
 	(setq eglot-autoshutdown t)
 	(add-to-list 'eglot-server-programs '(zig-mode . ("zls")))) ;; make sure zls is installed 
 ;; END Setup zig
-
