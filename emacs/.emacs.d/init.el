@@ -2,9 +2,6 @@
   (unless (>= emacs-major-version minver)
     (error "This config file requires Emacs version v%s or higher." minver)))
 
-(setq user-full-name "Felipe Bueno")
-(setq user-mail-address "bueno.felipe@gmail.com")
-
 (setq temporary-file-directory "~/.emacs.d/tmp")
 (setq find-function-C-source-directory "~/devel/tools/emacs/src")
 
@@ -61,8 +58,8 @@
 ;; (add-hook 'after-init-hook (lambda () (load-theme 'tango-dark t)))
 
 ;; BEGIN Setup Odin
-(add-to-list 'load-path "/home/felipe/.emacs.d/elpaca/repos/odin-mode")
-(add-to-list 'load-path "/home/felipe/devel/tools/langs/ols")
+(add-to-list 'load-path "~/.emacs.d/elpaca/repos/odin-mode")
+(add-to-list 'load-path "~/devel/tools/langs/ols")
 
 (require 'odin-mode)
 
