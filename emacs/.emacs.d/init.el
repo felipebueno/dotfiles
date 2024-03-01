@@ -66,19 +66,16 @@
 
 (require 'odin-mode)
 
-(use-package eglot
-  :ensure t
-  :config
-  (add-to-list 'eglot-server-programs '(odin-mode . ("ols")))
-  :hook
-  ((odin-mode . eglot-ensure)))
 ;; END Setup Odin
 
 ;; BEGIN Setup zig
 (use-package eglot
+  :ensure t
 	:hook
 	(zig-mode . eglot-ensure)
+  ((odin-mode . eglot-ensure))
 	:config
 	(setq eglot-autoshutdown t)
-	(add-to-list 'eglot-server-programs '(zig-mode . ("zls")))) ;; make sure zls is installed 
+  (add-to-list 'eglot-server-programs '(odin-mode . ("ols")))
+	(add-to-list 'eglot-server-programs '(zig-mode . ("zls"))))
 ;; END Setup zig

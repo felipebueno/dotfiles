@@ -27,6 +27,8 @@
     yasnippet
     zig-mode
     rg ;; ripgrep https://github.com/dajva/rg.el
+    w3m
+    helm-w3m
     )
   )
 
