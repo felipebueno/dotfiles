@@ -61,22 +61,12 @@
 
 (add-hook 'after-init-hook (lambda () (load-theme 'tango-dark t)))
 
-;; BEGIN Setup Odin
-(add-to-list 'load-path "~/.emacs.d/elpaca/repos/odin-mode")
-(add-to-list 'load-path "~/devel/tools/langs/ols")
-
-(require 'odin-mode)
-
-;; END Setup Odin
-
 ;; BEGIN Setup zig
 (use-package eglot
   :ensure t
 	:hook
 	(zig-mode . eglot-ensure)
-  ((odin-mode . eglot-ensure))
 	:config
 	(setq eglot-autoshutdown t)
-  (add-to-list 'eglot-server-programs '(odin-mode . ("ols")))
 	(add-to-list 'eglot-server-programs '(zig-mode . ("zls"))))
 ;; END Setup zig
