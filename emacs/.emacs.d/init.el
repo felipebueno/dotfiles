@@ -25,8 +25,12 @@
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 ;; END move this to a setup-projectile.el
 
-;; START hooks (require 'setup-hooks)
+;; BEGIN setup undo-tree
 (add-hook 'after-init-hook 'global-undo-tree-mode)
+(setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/tmp/")))
+;; END setup undo-tree
+
+;; START hooks (require 'setup-hooks)
 (add-hook 'after-init-hook 'global-company-mode)
 
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
@@ -55,7 +59,7 @@
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
 ;; END SETUP helm
 
-;; (add-hook 'after-init-hook (lambda () (load-theme 'tango-dark t)))
+(add-hook 'after-init-hook (lambda () (load-theme 'tango-dark t)))
 
 ;; BEGIN Setup Odin
 (add-to-list 'load-path "~/.emacs.d/elpaca/repos/odin-mode")

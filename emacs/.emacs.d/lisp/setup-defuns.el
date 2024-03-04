@@ -196,11 +196,4 @@ Support toggle for shell, term, ansi-term, eshell and ielm."
 (define-key global-map [f2] #'term-toggle-eshell)
 ;;; term-toggle.el ends here
 
-
-
-
-
-
-
-
 (provide 'setup-defuns)

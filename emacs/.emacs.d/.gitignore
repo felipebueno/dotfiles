@@ -17,6 +17,8 @@ cookies
 /newsticker
 \#*
 /elpa
+/quelpa
+eln-cache/
 site-lisp/package/
 site-lisp/jdee-*
 /.mc-lists.el
