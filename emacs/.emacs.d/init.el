@@ -59,7 +59,7 @@
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
 ;; END SETUP helm
 
-(add-hook 'after-init-hook (lambda () (load-theme 'tango-dark t)))
+;; (add-hook 'after-init-hook (lambda () (load-theme 'tango-dark t)))
 
 ;; BEGIN Setup zig
 (use-package eglot
