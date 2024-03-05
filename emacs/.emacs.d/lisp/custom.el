@@ -18,7 +18,7 @@
  '(cua-overwrite-cursor-color "#b58900")
  '(cua-read-only-cursor-color "#859900")
  '(custom-safe-themes
-   '("ade241807d5b43f335f0a7394a1608911f272ea00c81bc0d8448801719d9da0a" "71ecffba18621354a1be303687f33b84788e13f40141580fa81e7840752d31bf" "561ba4316ba42fe75bc07a907647caa55fc883749ee4f8f280a29516525fc9e8" "88cac3cdd1edc9e90074d8119cc9b14764b5e7e9944d92a582406c9e67bdacdc" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "c7e8605c82b636fc489340e8276a3983745891e18e77440bbae305d1b5af9201" default))
+   '(default))
  '(dired-use-ls-dired t)
  '(display-battery-mode t)
  '(display-time-24hr-format t)
@@ -55,7 +55,7 @@
  '(magit-diff-use-overlays nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(helm-w3m w3m rg helm-xref which-key avy hydra yasnippet zig-mode omnisharp exec-path-from-shell hover flycheck dart-mode dap-dlv-go dap-go go-mode web-mode use-package eglot lsp-go gopls helm-projectile helm expand-region elpy material-theme highlight-parentheses highlight-paren highlight-paren-mode ample-theme rainbow-delimiters undo-tree smex scpaste projectile paredit multiple-cursors magit lua-mode ido-yes-or-no idle-highlight-mode flx-ido company better-defaults))
+   '(helm-w3m w3m rg helm-xref which-key avy hydra yasnippet zig-mode exec-path-from-shell hover flycheck dart-mode dap-dlv-go dap-go go-mode web-mode use-package eglot gopls helm-projectile helm expand-region elpy material-theme highlight-parentheses highlight-paren highlight-paren-mode rainbow-delimiters undo-tree smex scpaste projectile paredit multiple-cursors magit lua-mode ido-yes-or-no idle-highlight-mode flx-ido company better-defaults))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(python-shell-interpreter "python3")

@@ -7,7 +7,7 @@
 (defvar my-packages
   '(
 		use-package
-    better-defaults
+    better-defaults ;; TODO: copy only the parts that I use and paste it on ./setup-defaults.el
     expand-region
     idle-highlight-mode
     magit
@@ -29,6 +29,7 @@
     rg ;; ripgrep https://github.com/dajva/rg.el
     w3m
     helm-w3m
+    dart-mode
     )
   )
 
@@ -52,7 +53,5 @@
   :config (yas-global-mode)) ;; snipets
 
 (use-package company :ensure t) ;; Auto-complete
-
-(use-package dap-mode :ensure t)
 
 (provide 'setup-packages)

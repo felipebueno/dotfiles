@@ -207,7 +207,8 @@ bindsym $mod+o workspace next
 bindsym $mod+i workspace prev
 
 # Faster key repetition on X
-exec --no-startup-id xset r rate 200 24
+# Not working. Moved to ~/.zshrc
+# exec --no-startup-id xset r rate 200 24
 
 # Remove all borders
 # for_window [class="^.*"] border pixel 0
