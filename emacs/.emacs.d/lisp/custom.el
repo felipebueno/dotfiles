@@ -17,8 +17,7 @@
  '(cua-normal-cursor-color "#839496")
  '(cua-overwrite-cursor-color "#b58900")
  '(cua-read-only-cursor-color "#859900")
- '(custom-safe-themes
-   '(default))
+ '(custom-safe-themes '(default))
  '(dired-use-ls-dired t)
  '(display-battery-mode t)
  '(display-time-24hr-format t)
@@ -55,7 +54,7 @@
  '(magit-diff-use-overlays nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(helm-w3m w3m rg helm-xref which-key avy hydra yasnippet zig-mode exec-path-from-shell hover flycheck dart-mode dap-dlv-go dap-go go-mode web-mode use-package eglot gopls helm-projectile helm expand-region elpy material-theme highlight-parentheses highlight-paren highlight-paren-mode rainbow-delimiters undo-tree smex scpaste projectile paredit multiple-cursors magit lua-mode ido-yes-or-no idle-highlight-mode flx-ido company better-defaults))
+   '(dap-mode helm-w3m w3m rg helm-xref which-key avy hydra yasnippet zig-mode exec-path-from-shell hover flycheck dart-mode dap-dlv-go dap-go go-mode web-mode use-package eglot gopls helm-projectile helm expand-region elpy material-theme highlight-parentheses highlight-paren highlight-paren-mode rainbow-delimiters undo-tree smex scpaste projectile paredit multiple-cursors magit lua-mode ido-yes-or-no idle-highlight-mode flx-ido company better-defaults))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(python-shell-interpreter "python3")
