@@ -7,13 +7,21 @@ C-x    = { s = ":w", C-s = ":w" }
 A-up   = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 A-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 A-x = "command_mode"
-# C-A-x = "space" TODO?
+C-p = "move_line_up"
+C-n = "move_line_down"
+C-b = "move_char_left"
+C-f = "move_char_right"
+C-v = "page_down"
+A-v = "page_up"
+A-f = ["move_next_word_start", "collapse_selection", "move_char_right"]
+A-b = ["move_prev_word_start", "collapse_selection"]# C-A-x = "space" TODO?
 
 [keys.insert]
-# j = { k = "normal_mode" } # Maps `jk` to exit insert mode
+# j = { k = "normal_mode" }
 C-g = "normal_mode"
 
 # Emacs bindings
+C-s = "search"
 C-p = "move_line_up"
 C-n = "move_line_down"
 C-b = "move_char_left"
@@ -27,17 +35,16 @@ A-u = "undo"
 A-S-u = "redo"
 C-e = ["goto_line_end", "move_char_right"]
 C-a = "goto_line_start"
-C-x = { s = ":w", C-s = ":w", f = "file_picker_in_current_buffer_directory", C-f = "file_picker_in_current_buffer_directory" }
+C-x = { s = [":w", "normal_mode"], C-s = [":w", "normal_mode"], f = "file_picker_in_current_buffer_directory", C-f = "file_picker_in_current_buffer_directory", c = ":q", C-c = ":q" }
 C-v = "page_down"
 A-v = "page_up"
 # "C-/" = "toggle_comments"
 # A-S-gt = "goto_file_end"
-C-z = "undo"   # temporary
-C-A-z = "redo" # temporary
+C-u = "undo"
+C-S-u = "redo"
 C-space = "select_mode"
-
-# [keys.normal."space"]
-# f = "file_picker_in_current_buffer_directory"
+# "A-." = "goto_definition"
+# "A-," = "jump_backward"
 
 [editor.cursor-shape]
 insert = "bar"
