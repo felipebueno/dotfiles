@@ -32,6 +32,7 @@
 
 ;; START hooks (require 'setup-hooks)
 (add-hook 'after-init-hook 'global-company-mode)
+(add-hook 'after-init-hook 'global-display-line-numbers-mode)
 
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
 (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
@@ -61,12 +62,14 @@
 
 ;; (add-hook 'after-init-hook (lambda () (load-theme 'tango-dark t)))
 
-;; BEGIN Setup zig
+;; BEGIN Setup eglot
 (use-package eglot
   :ensure t
 	:hook
 	(zig-mode . eglot-ensure)
+  (dart-mode . eglot-ensure)
+  (go-mode . eglot-ensure)
 	:config
 	(setq eglot-autoshutdown t)
 	(add-to-list 'eglot-server-programs '(zig-mode . ("zls"))))
-;; END Setup zig
+;; END Setup eglot
