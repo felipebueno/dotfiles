@@ -199,6 +199,8 @@ for_window [title="i3lazygit"] floating enable
 for_window [title="i3lazygit"] resize set 1280 720
 for_window [title="i3lazygit"] move absolute position center
 
+# TODO
+# bindsym $mod+g exec i3-sensible-terminal --title 'i3lazygit' -e 'cd $PWD && lazygit'
 
 # Show or create the terminal scratchpad window.
 bindsym $mod+m exec --no-startup-id "~/i3-scratchpad -tmt -atc alacritty +transparent"
@@ -213,8 +215,8 @@ bindsym $mod+i workspace prev
 # Not working. Moved to ~/.zshrc
 # exec --no-startup-id xset r rate 200 24
 
+for_window [class="^.*"] border pixel 1
 # Remove all borders
-# for_window [class="^.*"] border pixel 0
 # default_border none
 # default_floating_border normal
 hide_edge_borders both
