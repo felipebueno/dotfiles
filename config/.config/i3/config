@@ -195,7 +195,10 @@ bindsym Print       exec flameshot gui
 # for_window [title="arithmetic"] floating enable
 # for_window [title="arithmetic"] resize set 800 300
 # for_window [title="arithmetic"] move scratchpad
-# for_window [title="arithmetic"] border pixel 5
+for_window [title="i3lazygit"] floating enable
+for_window [title="i3lazygit"] resize set 1280 720
+for_window [title="i3lazygit"] move absolute position center
+
 
 # Show or create the terminal scratchpad window.
 bindsym $mod+m exec --no-startup-id "~/i3-scratchpad -tmt -atc alacritty +transparent"
