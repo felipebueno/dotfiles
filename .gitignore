@@ -25,3 +25,36 @@ self-installs/
 
 # i3
 config/.config/i3/#config#
+
+# vscode - TODO: Remove vscode config
+config/.config/Code/Cache
+config/.config/Code/CachedConfigurations
+config/.config/Code/CachedData
+config/.config/Code/CachedExtensionVSIXs
+config/.config/Code/Code\ Cache
+config/.config/Code/Cookies
+config/.config/Code/CachedProfilesData/
+config/.config/Code/Cookies-journal
+config/.config/Code/Crashpad/
+config/.config/Code/DawnGraphiteCache/
+config/.config/Code/DawnWebGPUCache/
+config/.config/Code/Dictionaries/
+config/.config/Code/GPUCache/
+config/.config/Code/Local Storage/
+config/.config/Code/Network Persistent State
+config/.config/Code/Preferences
+config/.config/Code/Service Worker/
+config/.config/Code/Session Storage/
+config/.config/Code/Shared Dictionary/
+config/.config/Code/SharedStorage
+config/.config/Code/TransportSecurity
+config/.config/Code/Trust Tokens
+config/.config/Code/Trust Tokens-journal
+config/.config/Code/User/History/
+config/.config/Code/User/globalStorage/
+config/.config/Code/User/workspaceStorage/
+config/.config/Code/WebStorage/
+config/.config/Code/databases/
+config/.config/Code/languagepacks.json
+config/.config/Code/logs/
+config/.config/Code/machineid
