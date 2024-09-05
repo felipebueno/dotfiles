@@ -18,6 +18,9 @@ A-f = ["move_next_word_start", "collapse_selection", "move_char_right"]
 A-b = ["move_prev_word_start", "collapse_selection"]
 # C-A-x = "space" # TODO: Learn how to call space cmd
 
+[keys.normal."space"]
+o = ":sh alacritty --title 'i3lazygit' -e lazygit" # TODO: name it
+
 [keys.insert]
 A-g = ":sh alacritty --title 'i3lazygit' -e lazygit"
 # j = { k = "normal_mode" }
@@ -37,7 +40,7 @@ A-d = "delete_word_forward"
 A-u = "undo"
 A-S-u = "redo"
 C-e = ["goto_line_end", "move_char_right"]
-C-a = "goto_line_start"
+C-a = "goto_first_nonwhitespace"
 C-x = { s = [":w", "normal_mode"], C-s = [":w", "normal_mode"], f = "file_picker_in_current_buffer_directory", C-f = "file_picker_in_current_buffer_directory", c = ":q", C-c = ":q" }
 C-v = "page_down"
 A-v = "page_up"
