@@ -231,6 +231,7 @@
   "zig.buildOnSave": true,
   "zig.zls.enableBuildOnSave": true,
   "zig.zls.warnStyle": true,
+  "cmake.showOptionsMovedNotification": false,
   // END zig
   // -------------------------------------------------------------//
 }
