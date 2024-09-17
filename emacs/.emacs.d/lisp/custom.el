@@ -54,12 +54,14 @@
  '(magit-diff-use-overlays nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(dap-mode helm-w3m w3m rg helm-xref which-key avy hydra yasnippet zig-mode exec-path-from-shell hover flycheck dart-mode dap-dlv-go dap-go go-mode web-mode use-package eglot gopls helm-projectile helm expand-region elpy material-theme highlight-parentheses highlight-paren highlight-paren-mode rainbow-delimiters undo-tree smex scpaste projectile paredit multiple-cursors magit lua-mode ido-yes-or-no idle-highlight-mode flx-ido company better-defaults))
+   '(sly-quicklisp sly-asdf sly zzz-to-char dap-mode helm-w3m w3m rg helm-xref which-key avy hydra yasnippet zig-mode exec-path-from-shell hover flycheck dart-mode dap-dlv-go dap-go go-mode web-mode use-package eglot gopls helm-projectile helm expand-region elpy material-theme highlight-parentheses highlight-paren highlight-paren-mode rainbow-delimiters undo-tree smex scpaste projectile paredit multiple-cursors magit lua-mode ido-yes-or-no idle-highlight-mode flx-ido company better-defaults))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(python-shell-interpreter "python3")
  '(safe-local-variable-values
-   '((vc-prepare-patches-separately)
+   '((Base . 10)
+     (Syntax . ANSI-Common-Lisp)
+     (vc-prepare-patches-separately)
      (diff-add-log-use-relative-names . t)
      (vc-git-annotate-switches . "-w")))
  '(scroll-conservatively 101)

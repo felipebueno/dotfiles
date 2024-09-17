@@ -41,6 +41,7 @@
 (add-hook 'lisp-mode-hook             #'enable-paredit-mode)
 (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
 (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
+(add-hook 'mrepl-mode-hook            #'enable-paredit-mode)
 
 (add-hook 'emacs-lisp-mode-hook       #'rainbow-delimiters-mode)
 
@@ -73,3 +74,8 @@
 	(setq eglot-autoshutdown t)
 	(add-to-list 'eglot-server-programs '(zig-mode . ("zls"))))
 ;; END Setup eglot
+
+;;(load (expand-file-name "~/quicklisp/slime-helper.el"))
+;; Replace "sbcl" with the path to your implementation
+(setq inferior-lisp-program "sbcl --dynamic-space-size 4096")
+
