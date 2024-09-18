@@ -37,12 +37,17 @@ A-v = "page_up"
 A-f = ["move_next_word_start", "collapse_selection", "move_char_right"]
 A-b = ["move_prev_word_start", "collapse_selection"]
 A-w = ":clipboard-yank"
-# C-A-x = "space" # TODO: Learn how to call space cmd
 
 [keys.normal."space"]
 o = ":sh alacritty --title 'i3lazygit' -e lazygit" # TODO: name it
 
 [keys.insert]
+"C-j" = [
+    "goto_line_end",
+    ":append-output echo ';'",
+    "move_char_right",
+    "open_below",
+]
 F1 = "command_palette"
 C-space = "completion"
 F3 = "extend_search_next"
@@ -76,4 +81,3 @@ C-S-u = "redo"
 # "A-." = "goto_definition"
 # "A-," = "jump_backward"
 A-w = ":clipboard-yank"
-
