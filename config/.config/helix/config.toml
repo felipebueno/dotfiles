@@ -15,8 +15,8 @@ select = "underline"
 hidden = false
 
 [editor.inline-diagnostics]
-cursor-line = "warning"
-other-lines = "warning"
+# cursor-line = "warning"
+# other-lines = "warning"
 
 # At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
 [keys.normal]
