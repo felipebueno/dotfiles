@@ -5,6 +5,7 @@ auto-completion = false
 preview-completion-insert = false
 # bufferline = "multiple"
 popup-border = "all"
+true-color = true
 
 [editor.cursor-shape]
 insert = "bar"
