@@ -54,7 +54,7 @@ F1 = "command_palette"
 C-space = "completion"
 F3 = "extend_search_next"
 A-g = ":sh alacritty --title 'i3lazygit' -e lazygit"
-# j = { k = "normal_mode" }
+j = { k = "normal_mode", C-g = "no_op" }
 C-g = "normal_mode"
 
 # Emacs bindings
