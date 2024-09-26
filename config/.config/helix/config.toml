@@ -39,6 +39,11 @@ A-v = "page_up"
 A-f = ["move_next_word_start", "collapse_selection", "move_char_right"]
 A-b = ["move_prev_word_start", "collapse_selection"]
 A-w = ":clipboard-yank"
+C-e = ["goto_line_end", "move_char_right"]
+C-a = "goto_first_nonwhitespace"
+C-d = "delete_char_forward"
+C-h = "delete_char_backward"
+# C-A-i = "increment"
 
 [keys.normal."space"]
 o = ":sh alacritty --title 'i3lazygit' -e lazygit" # TODO: name it
@@ -54,7 +59,7 @@ F1 = "command_palette"
 C-space = "completion"
 F3 = "extend_search_next"
 A-g = ":sh alacritty --title 'i3lazygit' -e lazygit"
-j = { k = "normal_mode", C-g = "no_op" }
+j = { k = "normal_mode", esc = "no_op", C-g = "no_op" }
 C-g = "normal_mode"
 
 # Emacs bindings
@@ -66,20 +71,21 @@ C-f = ["normal_mode", "move_char_right"]
 A-f = ["normal_mode", "move_next_word_start", "collapse_selection", "move_char_right"]
 A-b = ["normal_mode", "move_prev_word_start", "collapse_selection"]
 A-x = ["normal_mode", "command_mode"]
-A-h = "delete_word_backward"
-A-d = "delete_word_forward"
-A-u = "undo"
-A-S-u = "redo"
-C-e = ["goto_line_end", "move_char_right"]
-C-a = "goto_first_nonwhitespace"
+A-h = ["normal_mode", "delete_word_backward"]
+A-d = ["normal_mode", "delete_word_forward"]
+A-u = ["normal_mode", "undo"]
+A-S-u = ["normal_mode", "redo"]
+C-e = ["normal_mode", "goto_line_end", "move_char_right"]
+C-a = ["normal_mode", "goto_first_nonwhitespace"]
 C-x = { s = [":w", "normal_mode"], C-s = [":w", "normal_mode"], k = ":bc", f = "file_picker_in_current_buffer_directory", C-f = "file_picker_in_current_buffer_directory", c = ":q", C-c = ":q", h = "select_all" }
-C-v = "page_down"
-A-v = "page_up"
+C-v = ["normal_mode", "page_down"]
+A-v = ["normal_mode", "page_up"]
 # "C-/" = "toggle_comments"
 # A-S-gt = "goto_file_end"
-C-u = "undo"
-C-S-u = "redo"
+# C-u = "undo"
+# C-S-u = "redo"
 # C-space = "select_mode"
 # "A-." = "goto_definition"
 # "A-," = "jump_backward"
 A-w = ":clipboard-yank"
+# C-A-i = "increment"
