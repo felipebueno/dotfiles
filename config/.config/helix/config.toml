@@ -15,11 +15,13 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 
-[editor.inline-diagnostics]
+# [editor.inline-diagnostics]
 # cursor-line = "warning"
 # other-lines = "warning"
 
-# At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
+[keys.select]
+F1 = "command_palette"
+
 [keys.normal]
 F1 = "command_palette"
 F3 = "extend_search_next"
@@ -47,15 +49,9 @@ C-h = "delete_char_backward"
 
 [keys.normal."space"]
 o = ":sh alacritty --title 'i3lazygit' -e lazygit" # TODO: Add label "Open Lazygit"
-x = ["extend_to_line_bounds", "delete_selection"] # TODO: Add label "Cut line"
 
 [keys.insert]
-"C-j" = [
-    "goto_line_end",
-    ":append-output echo ';'",
-    "move_char_right",
-    # "open_below",
-]
+"C-j" = [ "goto_line_end", ":append-output echo ';'", "move_char_right" ]
 F1 = "command_palette"
 C-space = "completion"
 F3 = "extend_search_next"
@@ -64,14 +60,12 @@ j = { k = "normal_mode", esc = "no_op", C-g = "no_op" }
 C-g = "normal_mode"
 
 # Emacs bindings
-# C-s = "search"
 C-p = ["normal_mode", "move_line_up"]
 C-n = ["normal_mode", "move_line_down"]
 C-b = ["normal_mode", "move_char_left"]
 C-f = ["normal_mode", "move_char_right"]
 A-f = ["normal_mode", "move_next_word_start", "collapse_selection", "move_char_right"]
 A-b = ["normal_mode", "move_prev_word_start", "collapse_selection"]
-# A-x = ["normal_mode", "command_mode"]
 A-h = ["normal_mode", "delete_word_backward"]
 A-d = ["normal_mode", "delete_word_forward"]
 A-u = ["normal_mode", "undo"]
@@ -81,12 +75,5 @@ C-a = ["normal_mode", "goto_first_nonwhitespace"]
 C-x = { s = [":w", "normal_mode"], C-s = [":wa", "normal_mode"], k = ":bc", f = "file_picker_in_current_buffer_directory", C-f = "file_picker_in_current_buffer_directory", c = ":q", C-c = ":q", h = "select_all" }
 C-v = ["normal_mode", "page_down"]
 A-v = ["normal_mode", "page_up"]
-# "C-/" = "toggle_comments"
-# A-S-gt = "goto_file_end"
-# C-u = "undo"
-# C-S-u = "redo"
-# C-space = "select_mode"
-# "A-." = "goto_definition"
-# "A-," = "jump_backward"
 A-w = ":clipboard-yank"
 # C-A-i = "increment"
