@@ -25,6 +25,7 @@ F1 = "command_palette"
 [keys.normal]
 F1 = "command_palette"
 F3 = "extend_search_next"
+A-S-i = ":format"
 A-g = ":sh alacritty --title 'i3lazygit' -e lazygit"
 A-S-g = ":sh tmux new-window -n lazygit && tmux send-keys 'lazygit' Enter ;"
 esc    = ["collapse_selection", "keep_primary_selection"]
@@ -54,6 +55,7 @@ o = ":sh alacritty --title 'i3lazygit' -e lazygit" # TODO: Add label "Open Lazyg
 "C-j" = [ "goto_line_end", ":append-output echo ';'", "move_char_right" ]
 F1 = "command_palette"
 C-space = "completion"
+A-S-i = ":format"
 F3 = "extend_search_next"
 A-g = ":sh alacritty --title 'i3lazygit' -e lazygit"
 j = { k = "normal_mode", esc = "no_op", C-g = "no_op" }
