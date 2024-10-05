@@ -45,7 +45,7 @@ A-w = ":clipboard-yank"
 # C-A-i = "increment"
 
 [keys.normal."space"]
-o = [":new", ":insert-output lazygit", ":bc!", ":redraw"]
+o = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
 O = ":sh alacritty --title 'i3lazygit' -e lazygit" # TODO: Add label "Open Lazygit"
 
 [keys.insert]
