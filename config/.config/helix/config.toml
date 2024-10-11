@@ -45,8 +45,8 @@ A-w = ":clipboard-yank"
 # C-A-i = "increment"
 
 [keys.normal."space"]
-o = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
-O = ":sh alacritty --title 'i3lazygit' -e lazygit" # TODO: Add label "Open Lazygit"
+# o = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+o = ":sh alacritty --title 'i3lazygit' -e lazygit" # TODO: Add label "Open Lazygit"
 
 [keys.insert]
 "C-j" = [ "goto_line_end", ":append-output echo ';'", "move_char_right", "normal_mode" ]
@@ -54,7 +54,7 @@ C-space = "completion"
 A-S-i = ":format"
 F3 = "extend_search_next"
 A-g = ":sh alacritty --title 'i3lazygit' -e lazygit"
-# j = { k = "normal_mode", esc = "no_op", C-g = "no_op" }
+j = { k = "normal_mode", C-g = "no_op" }
 C-g = "normal_mode"
 backspace = "normal_mode"
 del = "normal_mode"
