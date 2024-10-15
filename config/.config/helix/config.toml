@@ -1,4 +1,6 @@
-theme =  "curzon"
+# theme =  "curzon"
+# theme = "papercolor-dark"
+theme = "vim_dark_high_contrast"
 
 [editor]
 auto-completion = false
