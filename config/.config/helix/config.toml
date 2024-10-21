@@ -22,6 +22,7 @@ hidden = false
 # other-lines = "warning"
 
 [keys.select]
+A-w = ":clipboard-yank"
 
 [keys.normal]
 F3 = "extend_search_next"
@@ -44,7 +45,6 @@ A-w = ":clipboard-yank"
 # C-a = "goto_first_nonwhitespace"
 # C-d = "delete_char_forward"
 # C-h = "delete_char_backward"
-# C-A-i = "increment"
 
 [keys.normal."space"]
 # o = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
