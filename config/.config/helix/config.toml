@@ -8,6 +8,8 @@ preview-completion-insert = false
 # bufferline = "multiple"
 popup-border = "all"
 true-color = true
+color-modes = true
+# cursorline = true
 
 [editor.cursor-shape]
 insert = "bar"

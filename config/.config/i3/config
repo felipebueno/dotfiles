@@ -214,7 +214,7 @@ for_window [title="i3floatphonei3"] move absolute position center
 # bindsym $mod+g exec i3-sensible-terminal --title 'i3lazygit' -e 'cd $PWD && lazygit'
 
 # Show or create the terminal scratchpad window.
-bindsym $mod+m exec --no-startup-id "~/i3-scratchpad -tmt -atc alacritty +transparent"
+bindsym $mod+m exec --no-startup-id "~/i3-scratchpad -tmt -acc -d 80%x80% alacritty +transparent"
 
 # Show or create the terminal scratchpad window.
 # bindsym $mod+u exec --no-startup-id "~/i3-scratchpad -tmt -atc discord +transparent"

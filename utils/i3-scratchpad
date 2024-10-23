@@ -63,7 +63,7 @@ print_help() {
 main() {
 	local screen_width screen_height offset_x offset_y width height x_pos y_pos \
 	      urxvt move wait command urxvt_opts toggle verbose \
-	      wid_file pid_dir animation_frame_delay=0.01
+	      wid_file pid_dir animation_frame_delay=0.001
 
 	pid_dir=${XDG_RUNTIME_DIR:-"/tmp"}
 
