@@ -46,7 +46,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -215,7 +215,7 @@ for_window [title="i3floatphonei3"] move absolute position center
 # bindsym $mod+g exec i3-sensible-terminal --title 'i3lazygit' -e 'cd $PWD && lazygit'
 
 # Show or create the terminal scratchpad window.
-bindsym $mod+m exec --no-startup-id "~/i3-scratchpad -tmt -acc -d 80%x80% kitty"
+bindsym $mod+m exec --no-startup-id "~/i3-scratchpad -tmt -acc -d 80%x80% alacritty"
 
 bindsym $mod+o workspace next
 bindsym $mod+i workspace prev
