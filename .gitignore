@@ -26,3 +26,6 @@ self-installs/
 
 # i3
 config/.config/i3/#config#
+
+# tmux
+config/.config/tmux/plugins/*
