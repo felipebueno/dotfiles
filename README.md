@@ -4,7 +4,7 @@ dotfiles
 ```
 install helix from source
 
-sudo apt install software-properties-common apt-transport-https build-essential git curl zsh ffmpeg mpv stow tmux
+sudo apt install software-properties-common apt-transport-https build-essential git curl zsh ffmpeg mpv stow tmux xdotool wmctrl
 
 git clone --recursive https://github.com/felipebueno/dotfiles.git ~/dotfiles
 
