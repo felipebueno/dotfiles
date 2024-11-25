@@ -76,8 +76,8 @@ C-x = { s = [":w", "normal_mode"], C-s = [":wa", "normal_mode"], k = ":bc", f = 
 # A-b = ["normal_mode", "move_prev_word_start"]
 # A-h = ["normal_mode", "delete_word_backward"]
 # A-d = ["normal_mode", "delete_word_forward"]
-# C-e = ["normal_mode", "goto_line_end", "move_char_right"]
-# C-a = ["normal_mode", "goto_first_nonwhitespace"]
+C-e = ["normal_mode", "goto_line_end", "move_char_right"]
+C-a = ["normal_mode", "goto_first_nonwhitespace"]
 # C-v = ["normal_mode", "page_down"]
 # A-v = ["normal_mode", "page_up"]
 # C-A-i = "increment" # not working
