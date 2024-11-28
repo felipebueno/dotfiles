@@ -2,19 +2,25 @@ dotfiles
 ========
 
 ```
-install helix from source
+* caps lock as ctrl *and* esc:
 
-sudo apt install software-properties-common apt-transport-https build-essential git curl zsh ffmpeg mpv stow tmux xdotool wmctrl
+    First modify the keyboard config with sudo gedit /etc/default/keyboard and set XKBOPTIONS="ctrl:nocaps" and then in your ~/.xprofile put the single line below.
 
-git clone --recursive https://github.com/felipebueno/dotfiles.git ~/dotfiles
+     ps aux | grep -i '[x]cape' && killall -9 xcape; hash xcape 2>&1 >/dev/null && xcape -e 'Control_L=Escape' -t 100 &
 
-cd ~/dotfiles
+* Install helix from source
 
-stow emacs? (Helix is, slowly but surely, becoming my new emacs)
+* sudo apt install software-properties-common apt-transport-https build-essential git curl zsh ffmpeg mpv stow tmux xdotool wmctrl
 
-stow config
+* git clone --recursive https://github.com/felipebueno/dotfiles.git ~/dotfiles
 
-stow etc
+* cd ~/dotfiles
+
+* stow emacs
+
+* stow config
+
+* stow etc
 ```
 
 # TODO
@@ -23,8 +29,10 @@ stow etc
 
   - gvm & golang stuff
 
-  - android & flutter stuff
+  - android & dart/flutter stuff
 
   - clang stuff
 
-  - zig & zls stuff
+  - maybe zig & zls stuff?
+
+  - maybe odin stuff?

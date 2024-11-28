@@ -65,7 +65,8 @@ A-g = ":sh alacritty --title 'i3lazygit' -e lazygit"
 C-g = "normal_mode"
 backspace = "normal_mode"
 del = "normal_mode"
-
+C-o = ["normal_mode", "jump_backward"]
+C-i = ["normal_mode", "jump_forward"]
 # Emacs movements (TODO: Get used to helix & vim motions)
 C-p = ["normal_mode", "move_line_up"]
 C-n = ["normal_mode", "move_line_down"]
