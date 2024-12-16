@@ -19,8 +19,8 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 
-# [editor.inline-diagnostics] # too annoying
-# cursor-line = "warning"
+[editor.inline-diagnostics]
+cursor-line = "warning"
 # other-lines = "warning"
 
 [keys.select]
