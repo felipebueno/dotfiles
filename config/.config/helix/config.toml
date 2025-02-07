@@ -52,7 +52,8 @@ A-w = ":clipboard-yank"
 
 [keys.normal."space"]
 # o = ":sh alacritty --title 'i3floati3' -e lazygit" # TODO: Add label "Open Lazygit"
-o = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+# o = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+o = ":sh alacritty --title 'i3lazygit' -e posting --collection ./"
 O = ":sh ghostwriter README.md" # TODO: Add label "Edit README.md on Ghostwriter"
 
 [keys.insert]
