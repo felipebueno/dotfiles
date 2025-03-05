@@ -29,3 +29,4 @@ config/.config/i3/#config#
 
 # tmux
 config/.config/tmux/plugins/*
+config/.config/helix/runtime
