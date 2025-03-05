@@ -1,8 +1,10 @@
 # theme = "papercolor-dark"
 # theme =  "curzon"
-theme = "vim_dark_high_contrast"
+# theme = "vim_dark_high_contrast"
+theme = "dark_plus"
 
 [editor]
+# auto-info = false
 auto-completion = false
 preview-completion-insert = false
 popup-border = "all"
@@ -10,6 +12,10 @@ true-color = true
 color-modes = true
 # bufferline = "multiple"
 # cursorline = true
+
+[editor.lsp]
+auto-signature-help = false
+display-signature-help-docs = false
 
 [editor.cursor-shape]
 insert = "bar"
