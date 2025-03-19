@@ -10,8 +10,7 @@ theme = "dark_plus"
 popup-border = "all"
 true-color = true
 color-modes = true
-end-of-line-diagnostics="hint"
-# bufferline = "multiple"
+end-of-line-diagnostics = "hint"
 # cursorline = true
 
 [editor.lsp]
@@ -31,18 +30,18 @@ cursor-line = "warning"
 # other-lines = "warning"
 
 [keys.select]
-A-w = ":clipboard-yank"
+# A-w = ":clipboard-yank" # use Space + y instead
 
 [keys.normal]
 "C-j" = [ "goto_line_end", ":append-output echo ';'", "move_char_right", "normal_mode" ]
-F3 = "extend_search_next"
+# F3 = "extend_search_next" # no need for this anymore
 A-g = ":sh alacritty --title 'i3lazygit' -e lazygit"
 A-S-i = ":format"
-esc   = ["collapse_selection", "keep_primary_selection"]
+# esc   = ["collapse_selection", "keep_primary_selection"] # use ; instead
 C-x   = { s = ":w", C-s = ":wa", k = ":bc" }
 A-S-p = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 A-S-n = ["extend_to_line_bounds", "delete_selection", "paste_after"]
-A-w = ":clipboard-yank"
+# A-w = ":clipboard-yank" # use Space + y instead
 # A-g = ":sh alacritty --title 'i3lazygit' -e lazygit"
 # C-p = "move_line_up"
 # C-n = "move_line_down"
@@ -75,7 +74,7 @@ O = ":sh ghostwriter README.md" # TODO: Add label "Edit README.md on Ghostwriter
 "C-j" = [ "goto_line_end", ":append-output echo ';'", "move_char_right", "normal_mode" ]
 C-space = "completion"
 A-S-i = [":format", "normal_mode"]
-F3 = "extend_search_next"
+# F3 = "extend_search_next" # no need for this anymore
 A-g = ":sh alacritty --title 'i3lazygit' -e lazygit"
 # j = { k = "normal_mode", C-g = "no_op" }
 C-g = "normal_mode"
