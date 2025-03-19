@@ -55,6 +55,13 @@ A-w = ":clipboard-yank"
 # C-a = "goto_first_nonwhitespace"
 # C-d = "delete_char_forward"
 # C-h = "delete_char_backward"
+C-y = [
+  ':sh rm -f /tmp/unique-file',
+  ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/unique-file}',
+  ':redraw',
+]
 
 [keys.normal."space"]
 # o = ":sh alacritty --title 'i3floati3' -e lazygit" # TODO: Add label "Open Lazygit"
@@ -91,3 +98,10 @@ C-a = ["normal_mode", "goto_first_nonwhitespace"]
 # C-A-i = "increment" # not working
 # A-S-p = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 # A-S-n = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+C-y = [
+  ':sh rm -f /tmp/unique-file',
+  ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/unique-file}',
+  ':redraw',
+]
