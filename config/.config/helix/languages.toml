@@ -1,0 +1,210 @@
+[[language]]
+name = "go"
+auto-format = true
+text-width = 180
+formatter = { command = "goimports" }
+roots = ["go.work", "go.mod"]
+language-servers = [ "gopls" ]
+
+[language.debugger]
+name = "go"
+transport = "tcp"
+command = "dlv"
+args = ["dap"]
+port-arg = "-l 127.0.0.1:{}"
+
+[[language.debugger.templates]]
+name = "source"
+request = "launch"
+completion = [ { name = "entrypoint", completion = "filename", default = "." } ]
+args = { mode = "debug", program = "{0}" }
+
+[[language.debugger.templates]]
+name = "binary"
+request = "launch"
+completion = [ { name = "binary", completion = "filename" } ]
+args = { mode = "exec", program = "{0}" }
+
+[[language.debugger.templates]]
+name = "test"
+request = "launch"
+completion = [ { name = "tests", completion = "directory", default = "." } ]
+args = { mode = "test", program = "{0}" }
+
+[[language.debugger.templates]]
+name = "attach"
+request = "attach"
+completion = [ "pid" ]
+args = { mode = "local", processId = "{0}" }
+
+[[language.debugger.templates]]
+name = "core"
+request = "launch"
+completion = [ { name = "binary", completion = "filename" }, { name = "core", completion = "filename" } ]
+args = { mode = "core", program = "{0}", coreFilePath = "{1}" }
+
+[[language]]
+name = "gomod"
+scope = "source.gomod"
+injection-regex = "gomod"
+file-types = [{ glob = "go.mod" }]
+auto-format = true
+comment-token = "//"
+language-servers = [ "gopls" ]
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "gotmpl"
+scope = "source.gotmpl"
+injection-regex = "gotmpl"
+file-types = ["gotmpl"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = [ "gopls" ]
+indent = { tab-width = 2, unit = " " }
+
+[[language]]
+name = "gowork"
+scope = "source.gowork"
+injection-regex = "gowork"
+file-types = [{ glob = "go.work" }]
+auto-format = true
+comment-token = "//"
+language-servers = [ "gopls" ]
+indent = { tab-width = 4, unit = "\t" }
+
+[language-server.gopls]
+command = "gopls"
+
+[language-server.gopls.config]
+gofumpt = true
+local = "goimports"
+semanticTokens = true
+staticcheck = true
+verboseOutput = true
+# analyses = { "fieldalignment" = true, "nilness" = true, unusedparams = true, unusedwrite = true, useany = true }
+usePlaceholders = true
+completeUnimported = true
+hints = { "assignVariableType" = true, "compositeLiteralFields" = true, "compositeLiteralTypes" = true, "constantValues" = true, "functionTypeParameters" = true, "parameterNames" = true, "rangeVariableTypes" = true }
+
+[[language]]
+name = "c-sharp"
+auto-format = true
+text-width = 180
+roots = ["csproj", "sln"]
+language-servers = ["csharp-ls"]
+
+[language-server.csharp-ls]
+command = "csharp-ls"
+
+[[language]]
+name = "jsonnet"
+scope = "source.jsonnet"
+file-types = ["libsonnet", "jsonnet"]
+roots = ["jsonnetfile.json"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+indent = { tab-width = 2, unit = "  " }
+language-servers = [ "jsonnet-language-server" ]
+formatter = { command = "jsonnetfmt" }
+
+[language-server.jsonnet-language-server]
+command = "jsonnet-language-server"
+args = [ "-t", "--lint" ]
+
+[[language]]
+name = "json"
+scope = "source.json"
+injection-regex = "json"
+file-types = [
+    "json",
+    "arb",
+    "ipynb",
+    "geojson",
+    "gltf",
+    "webmanifest",
+    { glob = "flake.lock" },
+    { glob = ".babelrc" },
+    { glob = ".bowerrc" },
+    { glob = ".jscrc" },
+    "js.map",
+    "ts.map",
+    "css.map",
+    { glob = ".jslintrc" },
+    "jsonl",
+    "jsonld",
+    { glob = ".vuerc" },
+    { glob = "composer.lock" },
+    { glob = ".watchmanconfig" },
+    "avsc",
+    { glob = ".prettierrc" },
+]
+language-servers = [ "vscode-json-languageserver" ]
+
+[language-server.vscode-json-languageserver]
+command = "vscode-json-languageserver"
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "yaml"
+scope = "source.yaml"
+file-types = ["yml", "yaml"]
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+language-servers = [ "yaml-language-server", "ansible-language-server" ]
+injection-regex = "yml|yaml"
+
+[language-server.yaml-language-server]
+command = "yaml-language-server"
+args = [ "--stdio" ]
+
+[language-server.ansible-language-server]
+command = "ansible-language-server"
+args = [ "--stdio" ]
+
+[[language]]
+name = "powershell"
+scope = "source.powershell"
+injection-regex = "(pwsh|powershell)"
+file-types = [ "ps1", "psm1", "psd1", "pscc", "psrc" ]
+shebangs = [ "pwsh", "powershell" ]
+comment-token = '#'
+block-comment-tokens = { start = "<#", end = "#>" }
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "markdown"
+scope = "source.md"
+injection-regex = "md|markdown"
+file-types = ["md", "markdown", "mdx", "mkd", "mkdn", "mdwn", "mdown", "markdn", "mdtxt", "mdtext", "workbook", { glob = "PULLREQ_EDITMSG" }]
+roots = [".marksman.toml"]
+language-servers = [ "marksman", "markdown-oxide", "mdpls" ]
+indent = { tab-width = 2, unit = "  " }
+block-comment-tokens = { start = "<!--", end = "-->" }
+
+[[language]]
+name = "markdown.inline"
+scope = "source.markdown.inline"
+injection-regex = "markdown\\.inline"
+file-types = []
+grammar = "markdown_inline"
+
+[language-server.marksman]
+command = "marksman"
+args = [ "server" ]
+
+[language-server.markdown-oxide]
+command = "markdown-oxide"
+
+[language-server.mdpls]
+command = "mdpls"
+config = { markdown.preview.auto = false }
+
+[[language]]
+name = "scheme"
+language-servers = [ "steel-language-server" ]
+
+[language-server.steel-language-server]
+command = "steel-language-server"
+args = []
