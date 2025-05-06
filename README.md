@@ -1,41 +1,123 @@
-dotfiles
-========
+# dotfiles
 
+This repository contains my personal dotfiles and setup scripts for configuring a my dev env on Linux (usually Debian Stable).
+
+## Keyboard Tweaks
+
+### Caps Lock as Ctrl & Esc
+
+To remap the Caps Lock key to act as **Ctrl** when held and **Esc** when tapped:
+
+1. Edit the keyboard configuration:
+
+   ```bash
+   sudo gedit /etc/default/keyboard
+   ```
+
+   Set the following option:
+
+   ```bash
+   XKBOPTIONS="ctrl:nocaps"
+   ```
+
+2. Add this to your `~/.xprofile`:
+
+   ```bash
+   ps aux | grep -i '[x]cape' && killall -9 xcape
+   hash xcape 2>&1 >/dev/null && xcape -e 'Control_L=Escape' -t 100 &
+   ```
+
+> ⚠️ **TODO**: Migrate from `xcape` to [`keyd`](https://github.com/rvaiya/keyd) for better key remapping support.
+
+---
+
+## Setup Instructions
+
+### Prerequisites
+
+Install essential development tools:
+
+```bash
+sudo apt install software-properties-common apt-transport-https \
+build-essential git curl zsh ffmpeg mpv stow tmux xdotool wmctrl
 ```
-* caps lock as ctrl *and* esc:
 
-    First modify the keyboard config with sudo gedit /etc/default/keyboard and set XKBOPTIONS="ctrl:nocaps" and then in your ~/.xprofile put the single line below.
+### Install Rust (required for Helix and WezTerm)
 
-     ps aux | grep -i '[x]cape' && killall -9 xcape; hash xcape 2>&1 >/dev/null && xcape -e 'Control_L=Escape' -t 100 &
-
-    TODO: use keyd instead of xcape (https://github.com/rvaiya/keyd)
-
-* Install helix from source
-
-* sudo apt install software-properties-common apt-transport-https build-essential git curl zsh ffmpeg mpv stow tmux xdotool wmctrl
-
-* curl https://sh.rustup.rs -sSf | sh -s # install rust (for helix and wezterm)
-
-* Install wezterm from source: https://wezterm.org/install/source.html#installing-from-source
-  * cargo install --locked --branch=main --git https://github.com/wezterm/wezterm.git generate-bidi strip-ansi-escapes sync-color-schemes wezterm wezterm-gui
-
-* Install heliz from source: https://docs.helix-editor.com/building-from-source.html
-
-* git clone --recursive https://github.com/felipebueno/dotfiles.git ~/dotfiles
-
-* cd ~/dotfiles
-
-* stow emacs
-
-* stow config
-
-* stow etc
+```bash
+curl https://sh.rustup.rs -sSf | sh
 ```
 
-# TODO
+---
 
-- Instructions for:
+## Install from Source
 
-  - gvm & golang stuff
+### Helix Editor
 
-  - android & dart/flutter stuff
+Follow the official guide:
+[Building Helix from Source](https://docs.helix-editor.com/building-from-source.html)
+
+### WezTerm Terminal
+
+```bash
+cargo install --locked --branch=main --git https://github.com/wezterm/wezterm.git generate-bidi strip-ansi-escapes sync-color-schemes wezterm wezterm-gui
+```
+
+Official instructions:
+[Installing WezTerm from Source](https://wezterm.org/install/source.html#installing-from-source)
+
+---
+
+## Dotfiles Setup
+
+Clone and set up:
+
+```bash
+git clone --recursive https://github.com/felipebueno/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+stow tmux
+stow utils
+stow config
+stow etc
+```
+
+---
+
+### Go (Golang) & GVM Setup
+
+Install GVM (Go Version Manager):
+
+```bash
+bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+source ~/.gvm/scripts/gvm
+```
+
+Install Go versions:
+
+```bash
+gvm install go1.24.1
+gvm use go1.24.1 --default
+```
+
+### Android & Flutter/Dart Setup
+
+#### Android SDK/NDK
+
+Install Android Studio
+
+#### Flutter & Dart
+
+```bash
+git clone https://github.com/flutter/flutter.git -b stable ~/flutter
+echo 'export PATH="$PATH:$HOME/flutter/bin"' >> ~/.bashrc
+flutter doctor
+```
+
+## TODO: Instructions for:
+
+### Clang
+
+### Odin
+
+### Zig
+
