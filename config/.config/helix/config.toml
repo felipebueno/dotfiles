@@ -65,6 +65,7 @@ C-y = "@:sh "
 # ]
 
 [keys.normal."space"]
+o = ":sh xdg-open . 2>/dev/null"
 # o = ":sh alacritty --title 'i3floati3' -e lazygit" # TODO: Add label "Open Lazygit"
 # o = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
 # o = ":sh alacritty --title 'i3lazygit' -e posting --collection ./"
