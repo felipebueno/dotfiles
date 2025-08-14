@@ -199,6 +199,9 @@ bindsym Print       exec flameshot gui
 # for_window [title="arithmetic"] resize set 800 300
 # for_window [title="arithmetic"] move scratchpad
 
+for_window [class="blastem"] floating enable
+# for_window [class="blastem"] resize set 512 512
+
 for_window [title="i3lazygit"] floating enable
 for_window [title="i3lazygit"] resize set 1280 720
 for_window [title="i3lazygit"] move absolute position center
