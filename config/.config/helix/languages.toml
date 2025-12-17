@@ -1,4 +1,10 @@
 [[language]]
+name = "dart"
+
+[language-server.dart.config]
+inlayHints = { parameterHints = true, typeHints = true }
+
+[[language]]
 name = "go"
 auto-format = true
 text-width = 180

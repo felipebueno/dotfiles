@@ -2,20 +2,37 @@
 # theme =  "curzon"
 # theme = "vim_dark_high_contrast"
 theme = "dark_plus"
+# theme = "papercolor-light"
 
 [editor]
-# auto-info = false
+trim-trailing-whitespace = true
 # auto-completion = false
-# preview-completion-insert = false
+preview-completion-insert = false
 popup-border = "all"
 true-color = true
 color-modes = true
 end-of-line-diagnostics = "hint"
+completion-replace = true
+completion-timeout = 5
+# indent-heuristic = "tree-sitter"
 # cursorline = true
 
+[editor.statusline]
+# left = ["mode", "spinner"]
+# center = ["file-name"]
+# right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+# separator = "│"
+# mode.normal = "NORMAL"
+# mode.insert = "INSERT"
+# mode.select = "SELECT"
+# diagnostics = ["warning", "error"]
+# workspace-diagnostics = ["warning", "error"]
+
 [editor.lsp]
-auto-signature-help = false
+# auto-signature-help = false
 display-signature-help-docs = false
+display-progress-messages = true
+# display-inlay-hints = true
 
 [editor.cursor-shape]
 insert = "bar"
