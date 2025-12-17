@@ -35,14 +35,13 @@ To remap the Caps Lock key to act as **Ctrl** when held and **Esc** when tapped:
 
 ### Prerequisites
 
-Install essential development tools:
+Install my favorite tools:
 
 ```bash
-sudo apt install software-properties-common apt-transport-https \
-build-essential git curl zsh ffmpeg mpv stow tmux xdotool wmctrl
+sudo apt install apt-transport-https build-essential git curl zsh ffmpeg mpv stow tmux xdotool wmctrl vim fzf blender gimp
 ```
 
-### Install Rust (required for Helix and WezTerm)
+### Install Rust (required to build Helix from source)
 
 ```bash
 curl https://sh.rustup.rs -sSf | sh
@@ -57,17 +56,6 @@ curl https://sh.rustup.rs -sSf | sh
 Follow the official guide:
 [Building Helix from Source](https://docs.helix-editor.com/building-from-source.html)
 
-### WezTerm Terminal
-
-```bash
-cargo install --locked --branch=main --git https://github.com/wezterm/wezterm.git generate-bidi strip-ansi-escapes sync-color-schemes wezterm wezterm-gui
-```
-
-Official instructions:
-[Installing WezTerm from Source](https://wezterm.org/install/source.html#installing-from-source)
-
----
-
 ## Dotfiles Setup
 
 Clone and set up:
@@ -78,7 +66,7 @@ cd ~/dotfiles
 stow tmux
 stow utils
 stow config
-stow etc
+stow vim
 ```
 
 ---
@@ -117,7 +105,4 @@ flutter doctor
 
 ### Clang
 
-### Odin
-
 ### Zig
-
