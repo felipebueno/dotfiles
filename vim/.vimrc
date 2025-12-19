@@ -29,6 +29,8 @@ Plug 'tpope/vim-commentary'                  " Commenting
 
 Plug 'easymotion/vim-easymotion'
 
+Plug 'liuchengxu/vim-which-key'
+
 call plug#end()
 
 " ================================
@@ -46,6 +48,7 @@ set updatetime=300                          " Faster updates for LSP
 set signcolumn=yes                          " Always show sign column
 set completeopt=menuone,noinsert,noselect   " Completion menu options
 set whichwrap+=h,l                          " Cursor wraps lines
+set smartindent
 
 " ================================
 "  VISUAL SETTINGS
@@ -65,8 +68,27 @@ set clipboard=unnamedplus                   " Use system clipboard
 "  LEADER KEY (Helix Style)
 " ================================
 let mapleader = " "
-let maplocalleader = " "
-nnoremap <Space> <Nop>                      
+let maplocalleader = ","
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+" let g:mapleader ="\<Space>"
+" let g:maplocalleader = ','
+" nnoremap <Space> <Nop>                      
+nnoremap <Space> <Nop>
+vnoremap <Space> <Nop>
+onoremap <Space> <Nop>
+
+" nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+" vnoremap <silent> <leader> :WhichKeyVisual '<Space>'<CR>
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
+" nnoremap <silent> g :<c-u>WhichKey 'g'<CR>
+nnoremap <silent> g     :<c-u>WhichKey 'g'<CR>
+" nnoremap <silent> [     :<c-u>WhichKey '['<CR>
+" nnoremap <silent> ]     :<c-u>WhichKey ']'<CR>
+" nnoremap <silent> z     :<c-u>WhichKey 'z'<CR>
+" nnoremap <silent> <C-w> :<c-u>WhichKey '<C-w>'<CR>
+
 
 " ================================
 "  LSP CONFIGURATION
@@ -138,6 +160,64 @@ let g:EasyMotion_use_upper = 1
 let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
 let g:EasyMotion_verbose = 0
 let g:EasyMotion_timeout = 300
+
+
+" =========================
+" which-key
+" =========================
+set timeout
+set timeoutlen=200
+let g:which_key_use_floating_win = 1
+let g:which_key_ignore_invalid_key = 1
+
+let g:which_key_map = {}
+let g:which_key_map.g = {
+      \ 'd': 'Go to definition',
+      \ 'r': 'References',
+      \ 'i': 'Implementation',
+      \ 'g': 'Top of file',
+      \ 'u': 'Lowercase',
+      \ 'U': 'Uppercase',
+      \ '~': 'Toggle case',
+      \ 'w': 'EasyMotion word',
+      \ }
+
+" [ prefix
+let g:which_key_map['['] = {
+      \ 'b': 'Previous buffer',
+      \ 'c': 'Previous change',
+      \ 'q': 'Previous quickfix',
+      \ }
+
+" ] prefix
+let g:which_key_map[']'] = {
+      \ 'b': 'Next buffer',
+      \ 'c': 'Next change',
+      \ 'q': 'Next quickfix',
+      \ }
+
+" z prefix
+let g:which_key_map.z = {
+      \ 'z': 'Center cursor',
+      \ 't': 'Top of screen',
+      \ 'b': 'Bottom of screen',
+      \ 'i': 'Toggle fold',
+      \ 'o': 'Open fold',
+      \ 'c': 'Close fold',
+      \ }
+
+" <C-w> prefix (window commands)
+let g:which_key_map['<C-w>'] = {
+      \ 'h': 'Move to left window',
+      \ 'j': 'Move to lower window',
+      \ 'k': 'Move to upper window',
+      \ 'l': 'Move to right window',
+      \ 's': 'Horizontal split',
+      \ 'v': 'Vertical split',
+      \ 'q': 'Close window',
+      \ 'o': 'Only window',
+      \ }
+
 " ================================
 "  FUNCTIONS
 " ================================
@@ -162,3 +242,6 @@ autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 " Close Vim if NERDTree is the only window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | quit | endif
 
+autocmd! FileType which_key
+autocmd  FileType which_key set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
