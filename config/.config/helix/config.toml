@@ -1,10 +1,11 @@
 # theme = "papercolor-dark"
 # theme =  "curzon"
-# theme = "vim_dark_high_contrast"
-theme = "dark_plus"
+theme = "vim_dark_high_contrast"
+# theme = "dark_plus"
 # theme = "papercolor-light"
 
 [editor]
+auto-format = true
 trim-trailing-whitespace = true
 # auto-completion = false
 preview-completion-insert = false
@@ -15,7 +16,7 @@ end-of-line-diagnostics = "hint"
 completion-replace = true
 completion-timeout = 5
 # indent-heuristic = "tree-sitter"
-# cursorline = true
+cursorline = true
 
 [editor.statusline]
 # left = ["mode", "spinner"]
@@ -62,7 +63,8 @@ C-x   = { s = ":w", C-s = ":wa", k = ":bc" }
 A-S-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 A-S-n = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 # A-w = ":clipboard-yank" # use Space + y instead
-A-g = ":sh alacritty --title 'i3lazygit' -e lazygit"
+# A-g = ":sh alacritty --title 'i3lazygit' -e lazygit"
+A-g = ":sh tmux popup -xC -yC -w98%% -h98%% -E lazygit"
 # C-p = "move_line_up"
 # C-n = "move_line_down"
 # C-b = "move_char_left"
@@ -101,7 +103,8 @@ A-S-i = [":format", "normal_mode"]
 F5 = ":reload-all"
 F6 = ":sh xdg-open %{buffer_name}"
 # A-g = ":sh tmux popup -xC -yC -w80%% -h80%% -E scooter"
-A-g = ":sh alacritty --title 'i3lazygit' -e lazygit"
+# A-g = ":sh alacritty --title 'i3lazygit' -e lazygit"
+A-g = ":sh tmux popup -xC -yC -w98%% -h98%% -E lazygit"
 # j = { k = "normal_mode", C-g = "no_op" }
 C-g = "normal_mode"
 backspace = "normal_mode"
